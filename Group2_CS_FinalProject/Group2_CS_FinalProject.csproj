@@ -119,7 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\PaymentMethod.cs" />
+    <Compile Include="Classes\CreditCard.cs" />
+    <Compile Include="Classes\IPayment.cs" />
     <Compile Include="Classes\ShoppingCart.cs" />
     <Compile Include="Pages\ShoppingCartPage.xaml.cs">
       <DependentUpon>ShoppingCartPage.xaml</DependentUpon>
