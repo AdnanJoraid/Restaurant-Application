@@ -80,14 +80,10 @@
         </SplitView>
         <Frame Background="Transparent"
                x:Name="frame"
-               Margin="172,0,0,0"
+               Margin="115,0,0,0"
                HorizontalAlignment="Left"
                VerticalAlignment="Center"
-               Width="1318"
+               Width="1375"
                Height="1000"/>
-
-
-
-
     </Grid>
 </Page>
