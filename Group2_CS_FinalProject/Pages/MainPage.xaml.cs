@@ -45,7 +45,7 @@ namespace Group2_CS_FinalProject.Pages
             }
             else if (mSplit.IsPaneOpen == true)
             {
-                MenuSplit.IsPaneOpen = false;
+                //MenuSplit.IsPaneOpen = false;
                 TextBlock1.Text = "";
                 TextBlock2.Text = "";
                 TextBlock3.Text = "";
@@ -54,7 +54,7 @@ namespace Group2_CS_FinalProject.Pages
             }
         }
 
-        private Void ButtonBase_OnClick1(Object sender, RoutedEventArgs e)
+        private void ButtonBase_OnClick1(Object sender, RoutedEventArgs e)
         {
             frame.Navigate(typeof(Main));
         }
@@ -68,7 +68,7 @@ namespace Group2_CS_FinalProject.Pages
         }
         private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ShoppingCartPage));
+            this.Frame.Navigate(typeof(ShoppingCartPage)); 
         }
         private void ButtonBase_OnClick5(object sender, RoutedEventArgs e)
         {

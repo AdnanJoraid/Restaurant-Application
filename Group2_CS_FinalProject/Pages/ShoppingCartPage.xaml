@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="LightGray">
 
+    <Page.Resources>
+        <Style TargetType="Button">
+            
+
+        </Style>
+
+    </Page.Resources>
+
     <Grid>
+        
         
 
 
