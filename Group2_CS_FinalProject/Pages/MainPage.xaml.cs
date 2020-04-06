@@ -68,7 +68,7 @@ namespace Group2_CS_FinalProject.Pages
         }
         private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            this.Frame.Navigate(typeof(ShoppingCartPage));
         }
         private void ButtonBase_OnClick5(object sender, RoutedEventArgs e)
         {

@@ -14,7 +14,7 @@ namespace Group2_CS_FinalProject.Classes
         //asks for the credit info and balance 
         //uses the CreditCard class 
         //moves the cart to the receipt class in which the total price will be displayed
-        //initilize the list in the constructor 
+        //initialize the list in the constructor 
 
     }
 }
