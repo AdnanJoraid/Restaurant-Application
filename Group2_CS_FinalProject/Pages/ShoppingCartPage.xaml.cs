@@ -29,7 +29,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
+            this.Frame.GoBack(); // go back to the main page. 
         }
     }
 }

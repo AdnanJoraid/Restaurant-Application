@@ -18,8 +18,11 @@
 
     <Grid>
 
-        <AppBarButton Icon="back" Click="ButtonBase_OnClick" Foreground="Black"
-                      />
+        <TextBlock Text="Shopping Cart"
+                   FontSize="40"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="Black"/>
         
         
 
