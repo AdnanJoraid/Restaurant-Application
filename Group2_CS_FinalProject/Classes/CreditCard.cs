@@ -10,6 +10,8 @@ namespace Group2_CS_FinalProject.Classes
     {
         public string Name { get; set; }
 
+        private Random Balance; 
+
         public int Cvv { get; set; }
 
         public int  CardNumber { get; set; }

@@ -27,9 +27,6 @@ namespace Group2_CS_FinalProject.Pages
             this.InitializeComponent();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack(); // go back to the main page. 
-        }
+        
     }
 }
