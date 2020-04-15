@@ -8,8 +8,11 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid Width="1376" Height="1000">
-        <TextBlock Text="MainPage,display cover" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" FontSize="100"/>
+    <Grid
+          Height="700" Margin="63,150,274,150">
 
+        <StackPanel>
+            <Image Source="../Assets/LogoMakr_0NOpD3.png" Height="367" Width="871"/>
+        </StackPanel>
     </Grid>
 </Page>
