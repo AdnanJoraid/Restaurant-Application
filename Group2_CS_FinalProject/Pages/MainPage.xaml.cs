@@ -65,11 +65,11 @@ namespace Group2_CS_FinalProject.Pages
         }
         private void ButtonBase_OnClick3(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            frame.Navigate(typeof(ShoppingCartPage));
         }
         private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(typeof(ShoppingCartPage));
+            
         }
         private void ButtonBase_OnClick5(object sender, RoutedEventArgs e)
         {
