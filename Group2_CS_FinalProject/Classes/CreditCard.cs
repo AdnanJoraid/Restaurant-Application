@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Background;
 
 namespace Group2_CS_FinalProject.Classes
 {
@@ -24,5 +25,11 @@ namespace Group2_CS_FinalProject.Classes
             // check if the amount is less than or equal to the user balance
             return true; 
         }
+
+        public CreditCard()
+        {
+            Balance = new Random();
+        }
     }
+
 }
