@@ -8,8 +8,11 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid Width="1376" Height="1000">
-        <TextBlock Text="MainPage,display cover" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" FontSize="100"/>
+    <Grid Width="1375"
+          Height="1000">
+        <!--<Image Source="../Assets/LogoMakr_0NOpD3.png" HorizontalAlignment="Left"/>-->
+        <TextBlock Text="MainPage, Main Logo" HorizontalAlignment="left" VerticalAlignment="Center" FontSize="100" Foreground="Black"/>
+
 
     </Grid>
 </Page>
