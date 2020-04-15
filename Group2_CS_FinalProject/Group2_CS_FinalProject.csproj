@@ -122,6 +122,7 @@
     <Compile Include="Classes\CreditCard.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\IPayment.cs" />
+    <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ShoppingCart.cs" />
     <Compile Include="Pages\AddProducts.xaml.cs">
       <DependentUpon>AddProducts.xaml</DependentUpon>

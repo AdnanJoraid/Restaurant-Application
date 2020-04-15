@@ -10,7 +10,7 @@ namespace Group2_CS_FinalProject.Classes
     {
         public string Name { get; set; }
 
-        private Random Balance; 
+        private Random Balance; //generate a random balance for the user.
 
         public int Cvv { get; set; }
 
