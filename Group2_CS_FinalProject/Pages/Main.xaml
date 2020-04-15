@@ -14,7 +14,7 @@
         <StackPanel>
             
             <Image Source="../Assets/LogoMakr_0NOpD3.png" Height="367" Width="871" HorizontalAlignment="Center"/>
-            <Button Content="Press to Place order" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100" Foreground="Black"/>
+            <Button Content="Press to Place order" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100" Foreground="Black" Click="ButtonBase_OnClick"/>
         </StackPanel>
     </Grid>
 </Page>
