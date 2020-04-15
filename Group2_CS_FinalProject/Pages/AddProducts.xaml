@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Group2_CS_FinalProject.Pages.Main"
+    x:Class="Group2_CS_FinalProject.Pages.AddProducts"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Group2_CS_FinalProject.Pages"
@@ -8,12 +8,7 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid
-          Height="700" Margin="63,150,274,150">
+    <Grid>
 
-        <StackPanel>
-            <Image Source="../Assets/LogoMakr_0NOpD3.png" Height="367" Width="871" HorizontalAlignment="Center"/>
-
-        </StackPanel>
     </Grid>
 </Page>

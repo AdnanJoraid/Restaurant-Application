@@ -70,7 +70,7 @@
                                 FontSize="25" 
                                 Height="50" 
                                 Width="50" 
-                                Content="&#xE7BF;" 
+                                Content="&#xE713;" 
                                 Background="Transparent"
                                 Click="ButtonBase_OnClick5"/>
                         <TextBlock FontSize="16" VerticalAlignment="Center" x:Name="TextBlock5"/>
