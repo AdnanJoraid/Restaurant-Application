@@ -38,7 +38,7 @@ namespace Group2_CS_FinalProject.Pages
                 mSplit.IsPaneOpen = true;
                 TextBlock1.Text = "Home";
                 TextBlock2.Text = "Add Items";
-                TextBlock3.Text = "Cart";
+                TextBlock3.Text = "Shopping Cart";
                 TextBlock4.Text = "Receipt";
                 TextBlock5.Text = "Settings";
 
