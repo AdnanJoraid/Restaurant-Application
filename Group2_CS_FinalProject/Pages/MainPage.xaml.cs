@@ -39,8 +39,9 @@ namespace Group2_CS_FinalProject.Pages
                 TextBlock1.Text = "Home";
                 TextBlock2.Text = "Add Items";
                 TextBlock3.Text = "Shopping Cart";
-                TextBlock4.Text = "Receipt";
+                TextBlock4.Text = "Customer";
                 TextBlock5.Text = "Settings";
+                TextBlock6.Text = "Receipt";
 
             }
             else if (mSplit.IsPaneOpen == true)
@@ -51,6 +52,7 @@ namespace Group2_CS_FinalProject.Pages
                 TextBlock3.Text = "";
                 TextBlock4.Text = "";
                 TextBlock5.Text = "";
+                TextBlock6.Text = "";
             }
         }
 
@@ -76,5 +78,9 @@ namespace Group2_CS_FinalProject.Pages
             throw new NotImplementedException();
         }
 
+        private void ButtonBase_OnClick6(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -75,6 +75,16 @@
                                 Click="ButtonBase_OnClick5"/>
                         <TextBlock FontSize="16" VerticalAlignment="Center" x:Name="TextBlock5"/>
                     </StackPanel>
+                    <StackPanel>
+                        <Button FontFamily="Segoe MDL2 Assets" 
+                                FontSize="25" 
+                                Height="50" 
+                                Width="50" 
+                                Content="&#xEC5B;" 
+                                Background="Transparent"
+                                Click="ButtonBase_OnClick6"/>
+                        <TextBlock FontSize="16" VerticalAlignment="Center" x:Name="TextBlock6"/>
+                    </StackPanel>
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
