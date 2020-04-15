@@ -8,17 +8,22 @@
     mc:Ignorable="d"
     Background="LightGray">
 
-    <!--<Page.Resources>
-        <Style TargetType="Button">
-            
-
-        </Style>
-
-    </Page.Resources>-->
+    
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/> 
+            <ColumnDefinition/>
 
-       
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
 
     </Grid>
 </Page>

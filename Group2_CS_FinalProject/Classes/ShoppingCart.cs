@@ -9,6 +9,8 @@ namespace Group2_CS_FinalProject.Classes
     public class ShoppingCart
     {
 
+        public List<Product> Products { get; set; } // contains the products selected by the customer
+
         // list of products selected by the user. 
         //displays the total amount 
         //asks for the credit info and balance 
