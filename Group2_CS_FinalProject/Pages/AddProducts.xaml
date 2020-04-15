@@ -8,7 +8,11 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid>
+    <Grid Height="700" Margin="63,150,274,150">
+        <StackPanel>
+            <TextBlock Text="Add to Shopping Cart"/>
+
+        </StackPanel>
 
     </Grid>
 </Page>
