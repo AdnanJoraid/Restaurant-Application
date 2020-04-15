@@ -18,8 +18,7 @@
 
     <Grid>
 
-        <AppBarButton Icon="back" Click="ButtonBase_OnClick" Foreground="Black"
-                      />
+       
 
     </Grid>
 </Page>
