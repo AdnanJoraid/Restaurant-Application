@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Background;
 
 namespace Group2_CS_FinalProject.Classes
 {
+    public enum CreditCardStatus //check the status of a creditcard, if notfound it means the user didnt add his/her creditcard
+    {
+        Approved, 
+        Declined,
+        NotFound
+    }
     public class CreditCard : IPayment
     {
         public string Name { get; set; }
 
-        private Random Balance; //generate a random balance for the user.
+        private Random Balance { get; } //generate a random balance for the user.
+
+        public int TotalBalance { get; set; }
 
         public int Cvv { get; set; }
 
@@ -21,8 +30,22 @@ namespace Group2_CS_FinalProject.Classes
 
         public bool Pay(double amount)
         {
-            // check if the amount is less than or equal to the user balance
+            // check if the amount is less than or equal to the user balance => do for loop to check the total amount in the shopping cart. 
             return true; 
         }
+
+        public CreditCard()
+        {
+            Balance = new Random();
+        }
+
+        public void GenerateBalance()
+        {
+
+            TotalBalance = Balance.Next(0, 270); //generates a random balance between 0 and 270 
+
+
+        }
     }
+
 }

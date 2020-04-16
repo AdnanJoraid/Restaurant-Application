@@ -12,7 +12,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/> 
+            <ColumnDefinition Width="1.5*"/> 
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
@@ -22,6 +22,29 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Button
+                Content="Pay Using CreditCard"
+                FontSize="50"
+                HorizontalAlignment="Left"
+                Foreground="Black"
+                Background="White"
+                x:Name="CreditCardButton"
+                Click="CreditCardButton_OnClick"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            
+            <TextBlock x:Name="num"
+                       FontSize="50"
+                       HorizontalAlignment="Right"
+                       Foreground="Black"
+                       Text=""/>
+        </StackPanel>
+
+        
 
 
 
