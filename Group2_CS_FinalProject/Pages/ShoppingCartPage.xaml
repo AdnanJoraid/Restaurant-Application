@@ -9,6 +9,15 @@
     Background="LightGray">
 
     
+    <Page.Resources>
+    <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="50"/>
+    </Style>
+
+    </Page.Resources>
+
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -23,13 +32,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <StackPanel Grid.Column="0" ></StackPanel>
+
         <StackPanel Grid.Column="1" Grid.Row="2">
             <Button
+                Style="{StaticResource ButtonStyle}"
                 Content="Pay Using CreditCard"
-                FontSize="50"
                 HorizontalAlignment="Left"
-                Foreground="Black"
-                Background="White"
                 x:Name="CreditCardButton"
                 Click="CreditCardButton_OnClick"/>
 
