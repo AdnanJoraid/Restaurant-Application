@@ -2,13 +2,15 @@
     x:Class="Group2_CS_FinalProject.Pages.SignUp"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Group2_CS_FinalProject"
+    xmlns:local="using:Group2_CS_FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background= "LightGray">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Sign Up" VerticalAlignment="Center" FontSize="80"/>
+        </StackPanel>
     </Grid>
 </Page>
