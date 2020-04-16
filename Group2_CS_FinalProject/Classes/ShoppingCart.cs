@@ -10,7 +10,6 @@ namespace Group2_CS_FinalProject.Classes
     {
 
         public List<Product> ShoppingList { get; set; } // contains the products selected by the customer
-
         // list of products selected by the user. 
         //displays the total amount 
         //asks for the credit info and balance 

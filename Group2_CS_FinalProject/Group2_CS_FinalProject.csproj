@@ -121,6 +121,8 @@
     </Compile>
     <Compile Include="Classes\CreditCard.cs" />
     <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Drink.cs" />
+    <Compile Include="Classes\Food.cs" />
     <Compile Include="Classes\IPayment.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ShoppingCart.cs" />
