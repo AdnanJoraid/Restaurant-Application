@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Group2_CS_FinalProject.Classes;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +28,13 @@ namespace Group2_CS_FinalProject.Pages
             this.InitializeComponent();
         }
 
-        
+
+        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            CreditCard creditCard = new CreditCard();
+
+            ShoppingCart sj = new ShoppingCart();
+            num.Text = sj.ShoppingList.Count.ToString();
+        }
     }
 }
