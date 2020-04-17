@@ -25,7 +25,7 @@ namespace Group2_CS_FinalProject.Classes
 
         public int  CardNumber { get; set; }
 
-        public int Date { get; set; }
+        public string Date { get; set; }
 
 
         public bool Pay(double amount) //going to change the parameter to take an argument of type shopping cart (the one that is being currently used by the xaml).

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Input.Spatial;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Group2_CS_FinalProject.Classes;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -82,8 +85,18 @@ namespace Group2_CS_FinalProject.Pages
 
         private void AddCard_OnClick(object sender, RoutedEventArgs e)
         {
-            //create a new instance of card
+            CreditCard card = new CreditCard()
+            {
+                CardNumber = int.Parse(NumberOnCreditCard.Text),
+                Cvv = int.Parse(CvvNumber.Text), 
+                Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
+                Name = NameOnCredit.Text
+            };
+            
+
+            this.Frame.Navigate(typeof(ShoppingCartPage), card); 
 
         }
+
     }
 }
