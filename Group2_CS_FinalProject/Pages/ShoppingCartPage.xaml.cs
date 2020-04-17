@@ -28,6 +28,11 @@ namespace Group2_CS_FinalProject.Pages
             this.InitializeComponent();
         }
 
+        private void IsCreditCardFound() //if a credit card was found, the customer will be able to pay. 
+        {
+            
+        }
+
 
         private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -35,6 +40,11 @@ namespace Group2_CS_FinalProject.Pages
 
             ShoppingCart sj = new ShoppingCart();
             num.Text = sj.ShoppingList.Count.ToString();
+        }
+
+        private void AddCreditButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreditCardAddingPage));
         }
     }
 }
