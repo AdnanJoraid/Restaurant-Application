@@ -85,7 +85,7 @@
             </ComboBox>
 
 
-
+        
 
         </StackPanel>
 
@@ -98,6 +98,7 @@
                 Width="200"
                 x:Name="AddCard"
                 Click="AddCard_OnClick"/>
+        
 
     </StackPanel>
 

@@ -32,7 +32,9 @@ namespace Group2_CS_FinalProject.Pages
         {
             this.InitializeComponent();
             PopulateComboBoxes(); //calls the method that fills ComboBoxes 
-            
+            //CreditValidation();
+
+
         }
 
         private void MonthOfBirthComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //calculate the day of month for every month
@@ -88,20 +90,27 @@ namespace Group2_CS_FinalProject.Pages
         {
             try
             {
+                CreditValidation();
                 CreditCard card = new CreditCard() //when the user enter the data it will create a new card and assigns the values for it
-                        {
-                            CardNumber = int.Parse(NumberOnCreditCard.Text),
-                            Cvv = int.Parse(CvvNumber.Text),
-                            Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
-                            Name = NameOnCredit.Text,
-                            CardStatus = CreditCardStatus.Approved
+                {
+                    CardNumber = int.Parse(NumberOnCreditCard.Text),
+                    Cvv = int.Parse(CvvNumber.Text),
+                    Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
+                    Name = NameOnCredit.Text,
+                    CardStatus = CreditCardStatus.Approved
 
-                        };
-                
+                };
 
-                
 
-                this.Frame.Navigate(typeof(ShoppingCartPage), card);
+                if (CreditValidation())
+                {
+                    this.Frame.Navigate(typeof(ShoppingCartPage), card);
+                }
+                else
+                {
+                    MessageDialog message = new MessageDialog("Please enter the correct amount of digits");
+                    message.ShowAsync();
+                }
             }
             catch (Exception)
             {
@@ -110,9 +119,15 @@ namespace Group2_CS_FinalProject.Pages
 
             }
 
-            
-            
+        }
 
+        private bool CreditValidation()
+        {
+
+            bool isValid = NumberOnCreditCard.Text.Length == 16 && CvvNumber.Text.Length == 3;
+
+         
+            return isValid; 
         }
 
     }
