@@ -13,12 +13,12 @@ namespace Group2_CS_FinalProject.Classes
         Declined,
         NotFound
     }
-    public class CreditCard : IPayment
+    public class CreditCard : IPayment //uses the IPayment interface
     {
 
         
 
-        public string Name { get; set; }
+        public string Name { get; set; } 
 
         public CreditCardStatus CardStatus { get; set; }
         private readonly Random random; //generate a random balance for the user.
@@ -42,7 +42,7 @@ namespace Group2_CS_FinalProject.Classes
             random = new Random();
         }
 
-        public void GenerateBalance()
+        public void GenerateBalance() //generate a random balance for the user
         {
             TotalBalance = random.Next(100, 270);
         }

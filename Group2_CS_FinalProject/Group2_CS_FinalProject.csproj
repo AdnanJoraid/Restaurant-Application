@@ -132,9 +132,6 @@
     <Compile Include="Pages\AddProducts.xaml.cs">
       <DependentUpon>AddProducts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreditCardAddingPage.xaml.cs">
-      <DependentUpon>CreditCardAddingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Customer.xaml.cs">
       <DependentUpon>Customer.xaml</DependentUpon>
     </Compile>
@@ -195,10 +192,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Pages\AddProducts.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\CreditCardAddingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

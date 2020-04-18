@@ -26,33 +26,35 @@ namespace Group2_CS_FinalProject.Pages
     /// </summary>
     public sealed partial class ShoppingCartPage : Page
     {
-
+        /// <summary>
+        /// This page is responsible for saving/creating creditcard and shopping carts, this page also validates inputs and uses other classes. 
+        /// </summary>
         private readonly List<CreditCard> _cardsHistory = new List<CreditCard>();
 
         private readonly List<Product> _mainShoppingCart = new List<Product>();
         public ShoppingCartPage()
         {
             this.InitializeComponent();
-            PopulateComboBoxes();
+            PopulateComboBoxes(); //calls the method populateComboBoxes as soon as the page loads
         }
 
 
-        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
+        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e) //when the pay using credit card button is pressed
         {
             try
             {
-                double oldBalance = _cardsHistory[0].TotalBalance;
-                var card = _cardsHistory[0];
+                double oldBalance = _cardsHistory[0].TotalBalance; //stores the balance of the card before the payment
+                var card = _cardsHistory[0]; //stores the first card object in the _cardHistoryList
 
-                double total = 0;
-                foreach (var item in _mainShoppingCart)
+                double total = 0; //sets total for 0
+                foreach (var item in _mainShoppingCart) //loop over the items in shoppingcart
                 {
-                    total += (item.ItemPrice * item.ItemQty);
+                    total += (item.ItemPrice * item.ItemQty); //gets the total and adds it 
                 }
 
-                if (card.Pay(total, oldBalance))
+                if (card.Pay(total, oldBalance)) //if the balance is less than the amount 
                 {
-                    double newBalance = card.TotalBalance - total;
+                    double newBalance = card.TotalBalance - total; //gets the new total amount
 
                     MessageDialog mApproved = new MessageDialog($"Your payment status is '{CreditCardStatus.Approved}'. The total price of your order is {total}. Your " +
                                                         $"new balance is {newBalance}");
@@ -69,7 +71,7 @@ namespace Group2_CS_FinalProject.Pages
             }
             catch (Exception)
             {
-                MessageDialog message = new MessageDialog("Error. Please try again");
+                MessageDialog message = new MessageDialog("Error. Please try again"); //shows this if there was unexpected error
                 message.ShowAsync();
             }
 
@@ -79,21 +81,21 @@ namespace Group2_CS_FinalProject.Pages
         
 
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e) //accepts the data from pages 
         {
 
 
             try
             {
-                if (e.Parameter is List<Product> products)
+                if (e.Parameter is List<Product> products) //if the data passed is of type list of products
                 {
-                    foreach (var item in products)
+                    foreach (var item in products) //loop over the list
                     {
-                        _mainShoppingCart.Add(item);
+                        _mainShoppingCart.Add(item); //adds item to the shopping cart 
                     
                     }
 
-                    foreach (var VARIABLE in _mainShoppingCart)
+                    foreach (var VARIABLE in _mainShoppingCart) //adds item to list view
                     {
                         ShoppingCartListView.Items.Add(VARIABLE);
                     }
@@ -104,7 +106,7 @@ namespace Group2_CS_FinalProject.Pages
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                MessageDialog m = new MessageDialog($"Error. Please try again");
+                MessageDialog m = new MessageDialog($"Error. Please try again"); //if error this message will occur
                 m.ShowAsync();
             }
 
@@ -114,7 +116,7 @@ namespace Group2_CS_FinalProject.Pages
 
         
 
-        private void LockingCreditButton(bool added)
+        private void LockingCreditButton(bool added) //if a creditcard is added, the button for that will be locked
         {
             if (added)
             {
@@ -212,19 +214,18 @@ namespace Group2_CS_FinalProject.Pages
             }
         }
 
-        private bool CreditValidation()
+        private bool CreditValidation() //validates the credit card input 
         {
 
-            bool isValid = NumberOnCreditCard.Text.Length == 16 && CvvNumber.Text.Length == 3;
+            bool isValid = NumberOnCreditCard.Text.Length == 16 && CvvNumber.Text.Length == 3; ///var of type bool 
 
-
-            return isValid;
+            return isValid; 
         }
 
 
         private void MoveToReceipt_OnClick(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof())
+            this.Frame.Navigate(typeof(Receipt), _mainShoppingCart); //passes data and navigate to Receipt page
         }
     }
 }
