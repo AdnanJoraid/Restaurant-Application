@@ -90,36 +90,34 @@ namespace Group2_CS_FinalProject.Pages
         {
             try
             {
-                CreditValidation();
-                CreditCard card = new CreditCard() //when the user enter the data it will create a new card and assigns the values for it
-                {
-                    CardNumber = int.Parse(NumberOnCreditCard.Text),
-                    Cvv = int.Parse(CvvNumber.Text),
-                    Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
-                    Name = NameOnCredit.Text,
-                    CardStatus = CreditCardStatus.Approved
-
-                };
-
-
                 if (CreditValidation())
                 {
+                    CreditCard card = new CreditCard() //when the user enter the data it will create a new card and assigns the values for it
+                    {
+                        CardNumber = NumberOnCreditCard.Text, //int.Parse(NumberOnCreditCard.Text),
+                        Cvv = int.Parse(CvvNumber.Text),
+                        Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
+                        Name = NameOnCredit.Text,
+                        CardStatus = CreditCardStatus.Approved
+
+                    };
+
                     this.Frame.Navigate(typeof(ShoppingCartPage), card);
-                }
-                else
+                }else
                 {
-                    MessageDialog message = new MessageDialog("Please enter the correct amount of digits");
-                    message.ShowAsync();
+                    MessageDialog message1 = new MessageDialog("Please enter the correct amount of digits");
+                    message1.ShowAsync();
                 }
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                MessageDialog message = new MessageDialog("Please enter a valid data"); //if the user entered invalid data this message will popup 
+                MessageDialog message = new MessageDialog($"Please enter a valid data {exception}"); //if the user entered invalid data this message will popup 
                 message.ShowAsync(); 
 
             }
 
         }
+
 
         private bool CreditValidation()
         {

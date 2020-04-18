@@ -22,14 +22,14 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
-            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
 
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -56,7 +56,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0">
             
-            <TextBlock x:Name="num"
+            <TextBlock x:Name="Title"
                        FontSize="50"
                        HorizontalAlignment="Center"
                        Foreground="Black"
@@ -71,6 +71,18 @@
                 Click="AddCreditButton_OnClick"
                 Style="{StaticResource ButtonStyle}"
                 HorizontalAlignment="Center"/>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <ListView>
+               <TextBlock Text="Items In Shopping Cart"
+                          FontSize="15"
+                          Foreground="Black"
+                          HorizontalAlignment="Center"
+                          x:Name="ItemInShoppingCart"/>
+            </ListView>
 
 
         </StackPanel>

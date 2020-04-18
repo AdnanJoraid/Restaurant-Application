@@ -27,7 +27,7 @@ namespace Group2_CS_FinalProject.Classes
 
         public int Cvv { get; set; }
 
-        public int  CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
         public string Date { get; set; }
 
