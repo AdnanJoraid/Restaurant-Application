@@ -11,7 +11,6 @@ namespace Group2_CS_FinalProject.Classes
         public string ItemName { get; set; }
         public double ItemPrice { get; set; }
 
-
         public void AddFood(int x)
         {
             Product product = new Product
