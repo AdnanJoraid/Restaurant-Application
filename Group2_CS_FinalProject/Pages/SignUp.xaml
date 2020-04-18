@@ -9,8 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="Sign Up" VerticalAlignment="Center" FontSize="80"/>
+        <StackPanel>
+            <Image Source="../Assets/LogoMakr_0NOpD3.png" Height="200" Width="870" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Margin="250" Text="Sign Up" VerticalAlignment="Center" FontSize="80"/>
+            <TextBlock Text="Username: " FontSize="60" HorizontalAlignment="Left"/>
+            <TextBlock Text="Password: " FontSize="60" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBox Margin="400" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="60"/>
+            <TextBox Margin="-350" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="60"/>
         </StackPanel>
     </Grid>
 </Page>
