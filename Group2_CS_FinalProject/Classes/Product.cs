@@ -12,6 +12,7 @@ namespace Group2_CS_FinalProject.Classes
         public string ItemName { get; set; }
         public double ItemPrice { get; set; }
         public int ItemQty { get; set; }
+        List<Product> Item = new List<Product>();
         public Product AddFood(int x, int qty)
         {
             Product product = new Product

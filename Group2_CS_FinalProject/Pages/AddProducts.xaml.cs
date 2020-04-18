@@ -270,7 +270,7 @@ namespace Group2_CS_FinalProject.Pages
                 EmptList.ShowAsync();
             }
             else
-                this.Frame.Navigate(typeof(ShoppingCart),ListItems);
+                this.Frame.Navigate(typeof(ShoppingCartPage),ListItems);
         }
     }
 }
