@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Group2_CS_FinalProject.Pages.Customer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Group2_CS_FinalProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="LightGray">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Customer Information"
+                       FontSize="80"
+                       HorizontalAlignment="Center"
+                       Foreground="Black"/>
+            <TextBlock Text="Username: " 
+                       FontSize="60"
+                       VerticalAlignment="Center"
+                       Margin="50"
+                       Foreground="Black"/>
+            <TextBlock Text="Password: " 
+                       FontSize="60"
+                       VerticalAlignment="Center"
+                       Margin="50"
+                       Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Username"
+                       HorizontalAlignment="Center"
+                       FontSize="60"
+                       Margin="160"
+                       Foreground="Black" />
+            <TextBlock Text="Password"
+                       HorizontalAlignment="Center"
+                       FontSize="60"
+                       Margin="-60"
+                       Foreground="Black" />
+        </StackPanel>
+    </Grid>
+</Page>
