@@ -152,7 +152,22 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Alfredo.jpg" />
+    <Content Include="Assets\CheeseCake.jpg" />
+    <Content Include="Assets\ChickenP.jpg" />
+    <Content Include="Assets\Coke.jpg" />
+    <Content Include="Assets\DrPepper.jpg" />
+    <Content Include="Assets\Hamburger.jpg" />
+    <Content Include="Assets\Hotdog.jpg" />
+    <Content Include="Assets\IceCream.jpg" />
     <Content Include="Assets\LogoMakr_0NOpD3.png" />
+    <Content Include="Assets\pepsi.jpg" />
+    <Content Include="Assets\Poutine.jpg" />
+    <Content Include="Assets\Soup.jpg" />
+    <Content Include="Assets\Spag.jpg" />
+    <Content Include="Assets\sprite.jpg" />
+    <Content Include="Assets\Steak.jpg" />
+    <Content Include="Assets\Water.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
