@@ -29,7 +29,7 @@
 
     </Page.Resources>
 
-    <StackPanel>
+    <!--<StackPanel>
 
         <TextBlock
             Text="PLEASE ADD YOUR CREDITCARD INFORMATION"
@@ -100,7 +100,7 @@
                 Click="AddCard_OnClick"/>
         
 
-    </StackPanel>
+    </StackPanel>-->
 
     
 </Page>

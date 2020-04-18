@@ -25,8 +25,10 @@ namespace Group2_CS_FinalProject.Pages
     public sealed partial class AddProducts : Page
     {
         private Product _prod = new Product();
-        MessageDialog added = new MessageDialog($"Item has been added to Shopping Cart.");
+        public List<Product> ListItems = new List<Product>();
+        MessageDialog added = new MessageDialog($"Item has been Saved.");
         MessageDialog error = new MessageDialog($"Item Quantity Must be an Integer.");
+        MessageDialog EmptList = new MessageDialog($"No Items Saved, Add items to proceed");
         public AddProducts()
         {
             this.InitializeComponent();
@@ -36,13 +38,25 @@ namespace Group2_CS_FinalProject.Pages
         {
             try
             {
+                //int x = 0;
+                //int qty = int.Parse(ItemQuantity1.Text);
+                //Product product = new Product
+                //{
+                //    ItemName = Food.ItemN[x],
+                //    ItemPrice = Food.ItemsP[x],
+                //    ItemQty = qty
+                //};
+                //ListItems.Add(product);
+                //added.ShowAsync();
+                //ItemQuantity1.Text = "Enter Quantity";
+
                 int qty = int.Parse(ItemQuantity1.Text);
                 int x = 0;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity1.Text = "Enter Quantity";
+                
             }
-            catch(FormatException)
+            catch (FormatException)
             {
                 error.ShowAsync();
             }
@@ -53,9 +67,8 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity2.Text);
                 int x = 1;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity2.Text = "Enter Quantity";
             }
             catch (FormatException)
             {
@@ -68,9 +81,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity3.Text);
                 int x = 2;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity3.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -83,9 +96,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity4.Text);
                 int x = 3;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity4.Text = "Enter Quantity";
+               
 
             }
             catch (FormatException)
@@ -99,9 +112,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity5.Text);
                 int x = 4;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity5.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -114,9 +127,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity6.Text);
                 int x = 5;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity6.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -129,9 +142,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity7.Text);
                 int x = 6;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity7.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -144,9 +157,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity8.Text);
                 int x = 7;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity8.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -160,25 +173,24 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity9.Text);
                 int x = 8;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity9.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
                 error.ShowAsync();
             }
         }
-
         private void ButtonBase_OnClick10(object sender, RoutedEventArgs e)
         {
             try
             {
                 int qty = int.Parse(ItemQuantity10.Text);
                 int x = 9;
-                _prod.AddFood(x, qty);
+                ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity10.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -192,9 +204,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity11.Text);
                 int x = 0;
-                _prod.AddDrink(x, qty);
+                ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity11.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -208,9 +220,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity12.Text);
                 int x = 1;
-                _prod.AddDrink(x, qty);
+                ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity12.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -224,9 +236,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity13.Text);
                 int x = 2;
-                _prod.AddDrink(x, qty);
+                ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity13.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -240,9 +252,9 @@ namespace Group2_CS_FinalProject.Pages
             {
                 int qty = int.Parse(ItemQuantity14.Text);
                 int x = 3;
-                _prod.AddDrink(x, qty);
+                ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity14.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -252,18 +264,12 @@ namespace Group2_CS_FinalProject.Pages
 
         private void ButtonBase_OnClick15(object sender, RoutedEventArgs e)
         {
-            try
+            if (ListItems.Count == 0)
             {
-                int qty = int.Parse(ItemQuantity15.Text);
-                int x = 4;
-                _prod.AddDrink(x, qty);
-                added.ShowAsync();
-                ItemQuantity15.Text = "Enter Quantity";
+                EmptList.ShowAsync();
             }
-            catch (FormatException)
-            {
-                error.ShowAsync();
-            }
+            else
+                this.Frame.Navigate(typeof(ShoppingCartPage),ListItems);
         }
     }
 }

@@ -10,34 +10,35 @@
 
     <Grid>
         <StackPanel Orientation="Vertical">
-
             <TextBlock Text="Customer Information"
                        FontSize="80"
                        HorizontalAlignment="Center"
-                       Foreground="Black" />
-            <StackPanel>
-                <TextBlock Text="Username: "
-                           FontSize="60"
-                           VerticalAlignment="Center"
-                           Margin="50"
-                           Foreground="Black" />
-                <TextBlock Text="Password: "
-                           FontSize="60"
-                           VerticalAlignment="Center"
-                           Margin="50"
-                           Foreground="Black" />
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="Username"
-                           HorizontalAlignment="Center"
-                           FontSize="60"
-                           Margin="160"
-                           Foreground="Black" />
-                <TextBlock Text="Password"
-                           HorizontalAlignment="Center"
-                           FontSize="60"
-                           Margin="-60"
-                           Foreground="Black" />
+                       Foreground="Black" 
+                       Margin="60"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Text="Username: "
+                               FontSize="60"
+                               VerticalAlignment="Center"
+                               Margin="50"
+                               Foreground="Black" />
+                    <TextBlock Text="Password: "
+                               FontSize="60"
+                               VerticalAlignment="Center"
+                               Margin="50"
+                               Foreground="Black" />
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom">
+                    <TextBlock Text="Username"
+                               HorizontalAlignment="Center"
+                               FontSize="60"
+                               Foreground="Black"/>
+                    <TextBlock Text="Password"
+                               HorizontalAlignment="Center"
+                               FontSize="60"
+                               Margin="70"
+                               Foreground="Black" />
+                </StackPanel>
             </StackPanel>
         </StackPanel>
     </Grid>

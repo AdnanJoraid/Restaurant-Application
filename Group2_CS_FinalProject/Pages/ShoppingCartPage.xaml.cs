@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,57 +27,77 @@ namespace Group2_CS_FinalProject.Pages
     public sealed partial class ShoppingCartPage : Page
     {
 
-        private List<CreditCard> _cardsHistory = new List<CreditCard>();
+        private readonly List<CreditCard> _cardsHistory = new List<CreditCard>();
 
-        private List<Product> _mainShoppingCart = new List<Product>();
+        private readonly List<Product> _mainShoppingCart = new List<Product>();
         public ShoppingCartPage()
         {
             this.InitializeComponent();
+            PopulateComboBoxes();
         }
 
+
+
+        
 
         private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
-              
-        }
-
-
-        private void AddCreditButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(CreditCardAddingPage));
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-
             try
             {
-                
-                if (_cardsHistory.Count == 0)
-                {
-                    var credit = e.Parameter as CreditCard;
-                    credit.GenerateBalance();
-                    IsCreditCardAdded.Text = $"Your CreditCard status is {credit.CardStatus}!\n Your current Balance is ${credit.TotalBalance}";
-                    LockingCreditButton(true);
-                     
+                var myCart = _mainShoppingCart[0]; 
+                ShoppingCart c = new ShoppingCart();
+                c.GetPrice(myCart); 
 
-                }
 
             }
             catch (Exception exception)
             {
+                MessageDialog message = new MessageDialog("Error. Please try again");
+            }
+              
+        }
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+
+            try
+            {
+                if (e.Parameter is List<Product> products)
+                {
+                    foreach (var item in products)
+                    {
+                        _mainShoppingCart.Add(item);
+                    
+                    }
+
+                    foreach (var VARIABLE in _mainShoppingCart)
+                    {
+                        ShoppingCartListView.Items.Add(VARIABLE);
+                    }
+
+                }
+                
+            }
+            catch (Exception exception)
+            {
                 Console.WriteLine(exception);
-                MessageDialog m = new MessageDialog($"Your CreditCard is not added, please add it by pressing the 'Add CreditCard' button");
+                MessageDialog m = new MessageDialog($"Error. Please try again");
                 m.ShowAsync();
             }
+
+            
             
         }
+
+        
 
         private void LockingCreditButton(bool added)
         {
             if (added)
             {
-                AddCreditButton.IsEnabled = false;
+                CreditAdded.IsEnabled = false;
                 CreditCardButton.IsEnabled = true;
             }
                 
@@ -85,10 +107,105 @@ namespace Group2_CS_FinalProject.Pages
         {
             //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.
             //var card = card[0], cart = shopping[0]; => if card.balance < cart.total return false else true; 
+            //also add the emum status if approved or not when pressing the pay button.
             
             return true;
         }
 
+        private void MonthOfBirthComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //calculate the day of month for every month
+        {
+            DayOfBirthComboBox.Items.Clear();
+            int daysOfMonth = 0;
+
+            switch (MonthOfBirthComboBox.SelectedIndex + 1)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    daysOfMonth = 31;
+                    break;
+                case 2:
+                    daysOfMonth = 29;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    daysOfMonth = 30;
+                    break;
+            }
+
+            for (int i = 1; i < daysOfMonth + 1; i++)
+            {
+                DayOfBirthComboBox.Items.Add(i);
+            }
+        }
+
+        private void PopulateComboBoxes()
+        {
+
+            //month 
+            for (int i = 1; i < 13; i++) //adds the months 
+            {
+                string monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                MonthOfBirthComboBox.Items.Add(monthName);
+            }
+
+            for (int i = DateTime.Now.Year + 1; i <= DateTime.Now.Year + 20; i++) //adds the years from 2020 to 2040
+            {
+                YearOfBirthComboBox.Items.Add(i);
+            }
+        }
+
+
+        private void AddCreditButton(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (CreditValidation())
+                {
+                    CreditCard card = new CreditCard() //when the user enter the data it will create a new card and assigns the values for it
+                    {
+                        CardNumber = NumberOnCreditCard.Text, //int.Parse(NumberOnCreditCard.Text),
+                        Cvv = int.Parse(CvvNumber.Text),
+                        Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
+                        Name = NameOnCredit.Text,
+                        CardStatus = CreditCardStatus.Approved
+
+                    };
+                    _cardsHistory.Add(card);
+                    card.GenerateBalance();
+                    IsCreditCardAdded.Text = $"Your CreditCard status is {card.CardStatus}!\n Your current Balance is ${card.TotalBalance}";
+                    LockingCreditButton(true);
+
+
+                }
+                else
+                {
+                    MessageDialog message1 = new MessageDialog("Please enter the correct amount of digits");
+                    message1.ShowAsync();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageDialog message = new MessageDialog($"Please enter a valid data {exception}"); //if the user entered invalid data this message will popup 
+                message.ShowAsync();
+
+            }
+        }
+
+        private bool CreditValidation()
+        {
+
+            bool isValid = NumberOnCreditCard.Text.Length == 16 && CvvNumber.Text.Length == 3;
+
+
+            return isValid;
+        }
 
     }
 }

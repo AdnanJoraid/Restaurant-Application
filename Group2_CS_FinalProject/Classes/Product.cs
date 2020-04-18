@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Group2_CS_FinalProject.Pages;
 
 namespace Group2_CS_FinalProject.Classes
 {
@@ -11,8 +12,7 @@ namespace Group2_CS_FinalProject.Classes
         public string ItemName { get; set; }
         public double ItemPrice { get; set; }
         public int ItemQty { get; set; }
-
-        public void AddFood(int x, int qty)
+        public Product AddFood(int x, int qty)
         {
             Product product = new Product
             {
@@ -20,11 +20,9 @@ namespace Group2_CS_FinalProject.Classes
                 ItemPrice = Food.ItemsP[x],
                 ItemQty = qty
             };
-            ShoppingCart shop = new ShoppingCart();
-            shop.ShoppingList.Add(product);
+            return product;
         }
-
-        public void AddDrink(int x, int qty)
+        public Product AddDrink(int x, int qty)
         {
             Product product = new Product
             {
@@ -32,8 +30,7 @@ namespace Group2_CS_FinalProject.Classes
                 ItemPrice = Drink.DrinkP[x],
                 ItemQty = qty
             };
-            ShoppingCart shop = new ShoppingCart();
-            shop.ShoppingList.Add(product);
+            return product;
         }
 
         }
