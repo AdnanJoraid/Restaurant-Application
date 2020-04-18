@@ -21,7 +21,7 @@ namespace Group2_CS_FinalProject.Classes
         public string Name { get; set; }
 
         public CreditCardStatus CardStatus { get; set; }
-        private Random Balance { get; } //generate a random balance for the user.
+        private readonly Random random; //generate a random balance for the user.
 
         public int TotalBalance { get; set; }
 
@@ -50,15 +50,12 @@ namespace Group2_CS_FinalProject.Classes
 
         public CreditCard()
         {
-            Balance = new Random();
+            random = new Random();
         }
 
         public void GenerateBalance()
         {
-
-            TotalBalance = Balance.Next(0, 270); //generates a random balance between 0 and 270 
-
-
+            TotalBalance = random.Next(20, 270);
         }
     }
 
