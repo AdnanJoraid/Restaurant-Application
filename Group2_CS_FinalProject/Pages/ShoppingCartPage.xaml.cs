@@ -33,9 +33,10 @@ namespace Group2_CS_FinalProject.Pages
 
         
 
-        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
+        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e, CreditCard card)
         {
-            
+            //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.  
+
         }
 
         private void AddCreditButton_OnClick(object sender, RoutedEventArgs e)
@@ -52,7 +53,8 @@ namespace Group2_CS_FinalProject.Pages
                 if (_cardsHistory.Count > 0)
                 {
                     var credit = e.Parameter as CreditCard;
-                    IsCreditCardAdded.Text = $"Your CreditCard status is {credit.CardStatus}!";
+                    credit.GenerateBalance();
+                    IsCreditCardAdded.Text = $"Your CreditCard status is {credit.CardStatus}!\n Your current Balance is ${credit.TotalBalance}";
                     LockingCreditButton(true);
                      
 
