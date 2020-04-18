@@ -9,11 +9,21 @@
     Background="LightGray">
 
     
+    <Page.Resources>
+    <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="40"/>
+    </Style>
+
+    </Page.Resources>
+
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.5*"/> 
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
 
         </Grid.ColumnDefinitions>
 
@@ -23,15 +33,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1" Grid.Row="2">
+        <StackPanel Grid.Column="0" ></StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2">
             <Button
+                Style="{StaticResource ButtonStyle}"
                 Content="Pay Using CreditCard"
-                FontSize="50"
-                HorizontalAlignment="Left"
-                Foreground="Black"
-                Background="White"
+                HorizontalAlignment="Center"
                 x:Name="CreditCardButton"
-                Click="CreditCardButton_OnClick"/>
+                Click="CreditCardButton_OnClick"
+                IsEnabled="False"/>
+
+            <TextBlock
+                Text="Must Add CreditCard first in order to pay"
+                Foreground="Black"
+                FontSize="20"
+                HorizontalAlignment="Center"
+                x:Name="IsCreditCardAdded"
+                />
 
         </StackPanel>
 
@@ -39,9 +58,21 @@
             
             <TextBlock x:Name="num"
                        FontSize="50"
-                       HorizontalAlignment="Right"
+                       HorizontalAlignment="Center"
                        Foreground="Black"
-                       Text=""/>
+                       Text="MyShoppingCart"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+
+            <Button
+                Content="Add CreditCard"
+                x:Name="AddCreditButton"
+                Click="AddCreditButton_OnClick"
+                Style="{StaticResource ButtonStyle}"
+                HorizontalAlignment="Center"/>
+
+
         </StackPanel>
 
         
