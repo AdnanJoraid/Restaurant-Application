@@ -5,6 +5,8 @@
     xmlns:local="using:Group2_CS_FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local2="using:Group2_CS_FinalProject.Classes"
+ 
     mc:Ignorable="d"
     Background="LightGray">
 
@@ -76,12 +78,31 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <ListView>
+            <ListView x:Name="ShoppingCartListView">
                <TextBlock Text="Items In Shopping Cart"
                           FontSize="15"
                           Foreground="Black"
                           HorizontalAlignment="Center"
                           x:Name="ItemInShoppingCart"/>
+
+               <ListView.ItemTemplate>
+                   <DataTemplate x:DataType="local2:Product">
+                       <StackPanel HorizontalAlignment="Center">
+                           <TextBlock Text="{x:Bind ItemName}"
+                                      FontSize="24"
+                                      Foreground="Black"
+                                      Margin="5"/>
+
+
+
+                        </StackPanel>
+                       
+
+
+                   </DataTemplate>
+
+
+               </ListView.ItemTemplate>
             </ListView>
 
 

@@ -25,12 +25,30 @@ namespace Group2_CS_FinalProject.Pages
     public sealed partial class ShoppingCartPage : Page
     {
 
-        private List<CreditCard> _cardsHistory = new List<CreditCard>();
+        private readonly List<CreditCard> _cardsHistory = new List<CreditCard>();
 
-        private List<Product> _mainShoppingCart = new List<Product>();
+        private readonly List<Product> _mainShoppingCart = new List<Product>();
         public ShoppingCartPage()
         {
             this.InitializeComponent();
+        }
+
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            if (e.Parameter is List<Product> products)
+                foreach(var item in products) 
+                {
+                    _mainShoppingCart.Add(item);
+                }
+        }
+
+        private void PopulateShoppingCart()
+        {
+            foreach (Product product in _mainShoppingCart)
+            {
+                ShoppingCartListView.Items.Add(product);
+            }
         }
 
 
@@ -85,6 +103,7 @@ namespace Group2_CS_FinalProject.Pages
         {
             //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.
             //var card = card[0], cart = shopping[0]; => if card.balance < cart.total return false else true; 
+            //also add the emum status if approved or not when pressing the pay button.
             
             return true;
         }
