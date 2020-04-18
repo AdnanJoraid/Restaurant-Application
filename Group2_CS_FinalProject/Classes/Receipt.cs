@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Group2_CS_FinalProject.Classes
 {
-    class Login
+    class Receipt
     {
+
     }
 }
