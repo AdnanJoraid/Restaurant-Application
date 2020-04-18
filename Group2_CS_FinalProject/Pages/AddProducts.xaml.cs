@@ -25,9 +25,10 @@ namespace Group2_CS_FinalProject.Pages
     public sealed partial class AddProducts : Page
     {
         private Product _prod = new Product();
-        public List<Product> ListItems { get; set; }
-        MessageDialog added = new MessageDialog($"Item has been added to Shopping Cart.");
+        public List<Product> ListItems = new List<Product>();
+        MessageDialog added = new MessageDialog($"Item has been Saved.");
         MessageDialog error = new MessageDialog($"Item Quantity Must be an Integer.");
+        MessageDialog EmptList = new MessageDialog($"No Items Saved, Add items to proceed");
         public AddProducts()
         {
             this.InitializeComponent();
@@ -37,13 +38,25 @@ namespace Group2_CS_FinalProject.Pages
         {
             try
             {
+                //int x = 0;
+                //int qty = int.Parse(ItemQuantity1.Text);
+                //Product product = new Product
+                //{
+                //    ItemName = Food.ItemN[x],
+                //    ItemPrice = Food.ItemsP[x],
+                //    ItemQty = qty
+                //};
+                //ListItems.Add(product);
+                //added.ShowAsync();
+                //ItemQuantity1.Text = "Enter Quantity";
+
                 int qty = int.Parse(ItemQuantity1.Text);
                 int x = 0;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity1.Text = "Enter Quantity";
+                ItemQuantity1.Text = "enter quantity";
             }
-            catch(FormatException)
+            catch (FormatException)
             {
                 error.ShowAsync();
             }
@@ -252,7 +265,12 @@ namespace Group2_CS_FinalProject.Pages
 
         private void ButtonBase_OnClick15(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ShoppingCart),ListItems);
+            if (ListItems.Count == 0)
+            {
+                EmptList.ShowAsync();
+            }
+            else
+                this.Frame.Navigate(typeof(ShoppingCart),ListItems);
         }
     }
 }
