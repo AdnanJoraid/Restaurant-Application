@@ -54,7 +54,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 0;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity1.Text = "enter quantity";
+                
             }
             catch (FormatException)
             {
@@ -69,7 +69,6 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 1;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity2.Text = "Enter Quantity";
             }
             catch (FormatException)
             {
@@ -84,7 +83,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 2;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity3.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -99,7 +98,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 3;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity4.Text = "Enter Quantity";
+               
 
             }
             catch (FormatException)
@@ -115,7 +114,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 4;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity5.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -130,7 +129,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 5;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity6.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -145,7 +144,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 6;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity7.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -160,7 +159,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 7;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity8.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -176,7 +175,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 8;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity9.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -191,7 +190,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 9;
                 ListItems.Add(_prod.AddFood(x, qty));
                 added.ShowAsync();
-                ItemQuantity10.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -207,7 +206,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 0;
                 ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity11.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -223,7 +222,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 1;
                 ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity12.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -239,7 +238,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 2;
                 ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity13.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
@@ -255,7 +254,7 @@ namespace Group2_CS_FinalProject.Pages
                 int x = 3;
                 ListItems.Add(_prod.AddDrink(x, qty));
                 added.ShowAsync();
-                ItemQuantity14.Text = "Enter Quantity";
+                
             }
             catch (FormatException)
             {
