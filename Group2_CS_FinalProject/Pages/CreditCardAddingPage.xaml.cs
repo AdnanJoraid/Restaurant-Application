@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel.Channels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -88,13 +89,15 @@ namespace Group2_CS_FinalProject.Pages
             try
             {
                 CreditCard card = new CreditCard() //when the user enter the data it will create a new card and assigns the values for it
-                {
-                    CardNumber = int.Parse(NumberOnCreditCard.Text),
-                    Cvv = int.Parse(CvvNumber.Text),
-                    Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
-                    Name = NameOnCredit.Text
-                    
-                };
+                        {
+                            CardNumber = int.Parse(NumberOnCreditCard.Text),
+                            Cvv = int.Parse(CvvNumber.Text),
+                            Date = $"{DayOfBirthComboBox.Text} {MonthOfBirthComboBox.Text} {YearOfBirthComboBox.Text}",
+                            Name = NameOnCredit.Text,
+                            CardStatus = CreditCardStatus.Approved
+
+                        };
+                
 
                 
 

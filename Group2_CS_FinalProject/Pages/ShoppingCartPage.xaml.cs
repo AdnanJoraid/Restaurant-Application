@@ -31,11 +31,7 @@ namespace Group2_CS_FinalProject.Pages
             this.InitializeComponent();
         }
 
-        private void IsCreditCardFound() //if a credit card was found, the customer will be able to pay. 
-        {
-            
-        }
-
+        
 
         private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -56,6 +52,7 @@ namespace Group2_CS_FinalProject.Pages
                 if (_cardsHistory.Count > 0)
                 {
                     var credit = e.Parameter as CreditCard;
+                    IsCreditCardAdded.Text = $"Your CreditCard status is {credit.CardStatus}!";
                     LockingCreditButton(true);
                      
 
@@ -76,7 +73,7 @@ namespace Group2_CS_FinalProject.Pages
             if (added)
             {
                 AddCreditButton.IsEnabled = false;
-                CreditCardButton.IsEnabled = true; 
+                CreditCardButton.IsEnabled = true;
             }
                 
         }
