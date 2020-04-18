@@ -9,10 +9,67 @@
     Background="Transparent">
 
     <Grid Height="700" Margin="63,150,274,150">
-        <StackPanel>
-            <TextBlock Text="Add to Shopping Cart"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation ="Vertical" Grid.Column="0" Grid.Row="0">
+            <TextBlock Text="Hamburger" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="9.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity1" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick1" Foreground="Black"/>
         </StackPanel>
-
+        <StackPanel Orientation ="Vertical" Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="HotDog" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="7.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity2" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick2" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="0" Grid.Row="2">
+            <TextBlock Text="Chicken Soup" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="8.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity3" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick3" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="0" Grid.Row="3">
+            <TextBlock Text="Steak and Potatoes" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="14.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity4" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick4" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="0" Grid.Row="4">
+            <TextBlock Text="Poutine" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="10.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity5" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick5" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="1" Grid.Row="0">
+            <TextBlock Text="Spaghetti and Meatballs" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="13.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity6" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick6" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="Chicken Parm" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="14.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity7" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick7" Foreground="Black"/>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Column="1" Grid.Row="2">
+            <TextBlock Text="Ice Cream" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="4.99" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox x:Name ="ItemQuantity8" Text="Enter Quantity" HorizontalAlignment="Center"/>
+            <Button Content="Add" HorizontalAlignment="Center" Click="ButtonBase_OnClick8"  Foreground="Black"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

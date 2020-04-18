@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="Group2_CS_FinalProject.Pages.CreditCardAddingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Group2_CS_FinalProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="LightGray">
+
+    <Page.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="40"/>
+        </Style>
+
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="PlaceholderForeground" Value="Black"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="20"/>
+
+
+        </Style>
+
+    </Page.Resources>
+
+    <StackPanel>
+
+        <TextBlock
+            Text="PLEASE ADD YOUR CREDITCARD INFORMATION"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            FontSize="35"
+            Margin="50"/>
+
+    
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add name on card"
+                x:Name="NameOnCredit"
+                HorizontalAlignment="Center"
+            />
+
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add number on card"
+                x:Name="NumberOnCreditCard"
+                HorizontalAlignment="Center"
+            />
+
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add (three digits at the back)"
+                x:Name="CvvNumber"
+                HorizontalAlignment="Center"
+            />
+
+
+
+        </StackPanel>
+
+        <TextBlock 
+            Text="Select the date in which your card will end"
+            FontSize="20"
+            Foreground="Black" 
+            HorizontalAlignment="Center"
+            Margin="20"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Orientation="Horizontal">
+
+          
+
+            <ComboBox SelectionChanged="MonthOfBirthComboBox_SelectionChanged" Width="115" x:Name="MonthOfBirthComboBox"></ComboBox>
+            <ComboBox Width="115" x:Name="DayOfBirthComboBox"></ComboBox>
+            <ComboBox Width="115" x:Name="YearOfBirthComboBox">
+                <x:Int32>2020</x:Int32>
+            </ComboBox>
+
+
+        
+
+        </StackPanel>
+
+        <Button Content="Add Card"
+                FontSize="24"
+                HorizontalAlignment="Center"
+                Margin="15"
+                Background="White"
+                Foreground="Black"
+                Width="200"
+                x:Name="AddCard"
+                Click="AddCard_OnClick"/>
+        
+
+    </StackPanel>
+
+    
+</Page>
