@@ -8,6 +8,5 @@ namespace Group2_CS_FinalProject.Classes
 {
     class Customer
     {
-
     }
 }

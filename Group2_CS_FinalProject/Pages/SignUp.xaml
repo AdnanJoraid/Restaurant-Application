@@ -8,57 +8,53 @@
       Background="LightGray">
 
     <Grid>
-        <StackPanel>
-            <Image Source="../Assets/LogoMakr_0NOpD3.png"
-                   Height="200"
-                   Width="870"
-                   HorizontalAlignment="Center" />
-        </StackPanel>
-
-        <StackPanel Orientation="Vertical"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top">
-            <TextBlock Margin="250"
-                       Text="Sign Up"
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <Image Source="../Assets/LogoMakr_0NOpD3.png"
+                       Height="200"
+                       Width="870"
+                       HorizontalAlignment="Center" />
+            </StackPanel>
+            <TextBlock Margin="60"
+                       Text="Create An Account"
+                       HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="80"
-                       Foreground="Black"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Vertical"
-                    HorizontalAlignment="Center">
-            <TextBox Margin="480"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Top"
-                     Width="500"
-                     Height="60"
-                     Foreground="Black" />
-
-            <TextBox Margin="-400"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Top"
-                     Width="500"
-                     Height="60"
-                     Foreground="Black" />
-        </StackPanel>
-
-        <StackPanel Orientation="Vertical"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center">
-            <TextBlock Text="Username: "
-                       FontSize="60"
-                       Margin="200"
                        Foreground="Black" />
-        </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Text="Username: "
+                               FontSize="60"
+                               Foreground="Black"
+                               Margin="15"/>
+                    <TextBlock Text="Password: "
+                               FontSize="60"
+                               HorizontalAlignment="Center"
+                               Foreground="Black"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBox HorizontalAlignment="Center"
+                             x:Name="NewUsername"
+                             Width="500"
+                             Height="60"
+                             Foreground="Black"
+                             FontSize="60"/>
+                    <TextBox Margin="40"
+                             HorizontalAlignment="Center"
+                             Width="500"
+                             Height="60"
+                             FontSize="60"
+                             Foreground="Black" />
 
-        <StackPanel Orientation="Vertical"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom">
-                <TextBlock Text="Password: "
-                           FontSize="60"
-                           Margin="310"
-                           HorizontalAlignment="Center"
-                           Foreground="Black"/>
-         </StackPanel>
+                </StackPanel>
+                <Button Content="Sign Up"
+                        Click="Button_Click"
+                        FontSize="60"
+                        Margin="50"
+                        Foreground="Black"
+                        Background="Gray"
+                        HorizontalAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

@@ -10,32 +10,35 @@
 
     <Grid>
         <StackPanel Orientation="Vertical">
+
             <TextBlock Text="Customer Information"
                        FontSize="80"
                        HorizontalAlignment="Center"
-                       Foreground="Black"/>
-            <TextBlock Text="Username: " 
-                       FontSize="60"
-                       VerticalAlignment="Center"
-                       Margin="50"
-                       Foreground="Black"/>
-            <TextBlock Text="Password: " 
-                       FontSize="60"
-                       VerticalAlignment="Center"
-                       Margin="50"
-                       Foreground="Black"/>
-        </StackPanel>
-        <StackPanel Orientation="Vertical">
-            <TextBlock Text="Username"
-                       HorizontalAlignment="Center"
-                       FontSize="60"
-                       Margin="160"
                        Foreground="Black" />
-            <TextBlock Text="Password"
-                       HorizontalAlignment="Center"
-                       FontSize="60"
-                       Margin="-60"
-                       Foreground="Black" />
+            <StackPanel>
+                <TextBlock Text="Username: "
+                           FontSize="60"
+                           VerticalAlignment="Center"
+                           Margin="50"
+                           Foreground="Black" />
+                <TextBlock Text="Password: "
+                           FontSize="60"
+                           VerticalAlignment="Center"
+                           Margin="50"
+                           Foreground="Black" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Username"
+                           HorizontalAlignment="Center"
+                           FontSize="60"
+                           Margin="160"
+                           Foreground="Black" />
+                <TextBlock Text="Password"
+                           HorizontalAlignment="Center"
+                           FontSize="60"
+                           Margin="-60"
+                           Foreground="Black" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
