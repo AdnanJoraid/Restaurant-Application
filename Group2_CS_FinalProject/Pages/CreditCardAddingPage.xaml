@@ -10,14 +10,14 @@
 
     <Page.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="40"/>
         </Style>
 
         <Style x:Key="TextBoxStyle" TargetType="TextBox">
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="DarkGray"/>
             <Setter Property="PlaceholderForeground" Value="Black"/>
             <Setter Property="Width" Value="300"/>
             <Setter Property="Height" Value="40"/>
@@ -62,9 +62,6 @@
                 HorizontalAlignment="Center"
             />
 
-            
-
-
 
 
         </StackPanel>
@@ -84,7 +81,7 @@
             <ComboBox SelectionChanged="MonthOfBirthComboBox_SelectionChanged" Width="115" x:Name="MonthOfBirthComboBox"></ComboBox>
             <ComboBox Width="115" x:Name="DayOfBirthComboBox"></ComboBox>
             <ComboBox Width="115" x:Name="YearOfBirthComboBox">
-                <x:Int32>1999</x:Int32>
+                <x:Int32>2020</x:Int32>
             </ComboBox>
 
 
