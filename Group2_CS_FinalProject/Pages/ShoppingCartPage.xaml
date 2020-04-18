@@ -12,7 +12,19 @@
 
     
     <Page.Resources>
-    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="PlaceholderForeground" Value="Black"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="20"/>
+
+
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="40"/>
@@ -67,35 +79,99 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1">
 
+           <TextBlock
+               Text="Add your credit information"
+               FontSize="24"
+               HorizontalAlignment="Center"
+               Foreground="Black"/>
+
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add name on card"
+                x:Name="NameOnCredit"
+                HorizontalAlignment="Center"
+            />
+
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add number on card"
+                x:Name="NumberOnCreditCard"
+                HorizontalAlignment="Center"
+            />
+
+            <TextBox
+                Style="{StaticResource TextBoxStyle}"
+                PlaceholderText="Add (three digits at the back)"
+                x:Name="CvvNumber"
+                HorizontalAlignment="Center"
+            />
+
+            <TextBlock 
+                Text="Select the date in which your card will end"
+                FontSize="20"
+                Foreground="Black" 
+                HorizontalAlignment="Center"
+                Margin="20"/>
+
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center" Orientation="Horizontal">
+
+
+
+                <ComboBox SelectionChanged="MonthOfBirthComboBox_SelectionChanged" Width="115" x:Name="MonthOfBirthComboBox"></ComboBox>
+                <ComboBox Width="115" x:Name="DayOfBirthComboBox"></ComboBox>
+                <ComboBox Width="115" x:Name="YearOfBirthComboBox">
+                    <x:Int32>2020</x:Int32>
+                </ComboBox>
+            </StackPanel>
+
             <Button
-                Content="Add CreditCard"
-                x:Name="AddCreditButton"
-                Click="AddCreditButton_OnClick"
                 Style="{StaticResource ButtonStyle}"
-                HorizontalAlignment="Center"/>
+                HorizontalAlignment="Center"
+                Margin="20"
+                Content="save"
+                FontSize="25"
+                Foreground="Black"
+                Background="DarkGray"
+                x:Name="CreditAdded"
+                Click="AddCreditButton"/>
+
 
 
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
             <ListView x:Name="ShoppingCartListView">
-               <TextBlock Text="Items In Shopping Cart"
+               <!--<TextBlock Text="Items In Shopping Cart"
                           FontSize="15"
                           Foreground="Black"
                           HorizontalAlignment="Center"
-                          x:Name="ItemInShoppingCart"/>
+                          x:Name="ItemInShoppingCart"/>-->
 
                <ListView.ItemTemplate>
                    <DataTemplate x:DataType="local2:Product">
-                       <StackPanel HorizontalAlignment="Center">
-                           <TextBlock Text="{x:Bind ItemName}"
+                       <StackPanel>
+
+                           <TextBlock Text="{x:Bind ItemName }"
+                                      FontSize="24"
+                                      Foreground="Black"
+                                      Margin="5"/>
+                           <TextBlock Text="{x:Bind ItemQty }"
+                                      FontSize="24"
+                                      Foreground="Black"
+                                      Margin="5"/>
+                           <TextBlock Text="{x:Bind ItemPrice }"
                                       FontSize="24"
                                       Foreground="Black"
                                       Margin="5"/>
 
 
 
+
                         </StackPanel>
+                       
+
+                     
                        
 
 
@@ -104,8 +180,6 @@
 
                </ListView.ItemTemplate>
             </ListView>
-
-
         </StackPanel>
 
         
