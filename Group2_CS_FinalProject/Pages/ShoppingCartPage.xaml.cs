@@ -26,18 +26,19 @@ namespace Group2_CS_FinalProject.Pages
     {
 
         private List<CreditCard> _cardsHistory = new List<CreditCard>();
+
+        private List<Product> _mainShoppingCart = new List<Product>();
         public ShoppingCartPage()
         {
             this.InitializeComponent();
         }
 
-        
 
-        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e, CreditCard card)
+        private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
-            //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.  
-
+              
         }
+
 
         private void AddCreditButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -49,8 +50,8 @@ namespace Group2_CS_FinalProject.Pages
 
             try
             {
-                _cardsHistory.Add(new CreditCard());
-                if (_cardsHistory.Count > 0)
+                
+                if (_cardsHistory.Count == 0)
                 {
                     var credit = e.Parameter as CreditCard;
                     credit.GenerateBalance();
@@ -79,5 +80,15 @@ namespace Group2_CS_FinalProject.Pages
             }
                 
         }
+
+        public bool IsAbleToPay()
+        {
+            //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.
+            //var card = card[0], cart = shopping[0]; => if card.balance < cart.total return false else true; 
+            
+            return true;
+        }
+
+
     }
 }
