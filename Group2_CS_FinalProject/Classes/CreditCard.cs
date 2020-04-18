@@ -15,8 +15,12 @@ namespace Group2_CS_FinalProject.Classes
     }
     public class CreditCard : IPayment
     {
+
+        
+
         public string Name { get; set; }
 
+        public CreditCardStatus CardStatus { get; set; }
         private Random Balance { get; } //generate a random balance for the user.
 
         public int TotalBalance { get; set; }
