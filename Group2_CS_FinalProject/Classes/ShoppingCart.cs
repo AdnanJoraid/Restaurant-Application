@@ -19,10 +19,10 @@ namespace Group2_CS_FinalProject.Classes
         }
 
 
-        public double GetPrice(List<Product> products)
+        internal double GetPrice(List<Product> products)
         {
             double price = 0; 
-            foreach (var item in products)
+            foreach (Product item in products)
             {
                 price += (item.ItemPrice * item.ItemQty);
             }
@@ -30,9 +30,6 @@ namespace Group2_CS_FinalProject.Classes
             return price;
         }
 
-        internal void GetPrice(Product myCart)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

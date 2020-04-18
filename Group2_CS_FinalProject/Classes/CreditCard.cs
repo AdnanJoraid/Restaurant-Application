@@ -32,20 +32,9 @@ namespace Group2_CS_FinalProject.Classes
         public string Date { get; set; }
 
 
-        public bool Pay(double amount) //going to change the parameter to take an argument of type shopping cart (the one that is being currently used by the xaml).
+        public bool Pay(double total, double balance) //going to change the parameter to take an argument of type shopping cart (the one that is being currently used by the xaml).
         {
-            // check if the amount is less than or equal to the user balance => do for loop to check the total amount in the shopping cart. 
-            //int total; 
-            //foreach (var item in ShoppingList){
-                //total += item.price; 
-            //}
-            //return total; 
-            // bool ableToPay = TotalBalance > total ? true : false; 
-            //return ableToPay
-
-
-                
-            return true; 
+            return balance > total;
         }
 
         public CreditCard()
@@ -55,8 +44,10 @@ namespace Group2_CS_FinalProject.Classes
 
         public void GenerateBalance()
         {
-            TotalBalance = random.Next(20, 270);
+            TotalBalance = random.Next(100, 270);
         }
+
+        
     }
 
 }

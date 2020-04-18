@@ -37,25 +37,46 @@ namespace Group2_CS_FinalProject.Pages
         }
 
 
-
-        
-
         private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                var myCart = _mainShoppingCart[0]; 
-                ShoppingCart c = new ShoppingCart();
-                c.GetPrice(myCart); 
+                double oldBalance = _cardsHistory[0].TotalBalance;
+                var card = _cardsHistory[0];
+
+                double total = 0;
+                foreach (var item in _mainShoppingCart)
+                {
+                    total += (item.ItemPrice * item.ItemQty);
+                }
+
+                if (card.Pay(total, oldBalance))
+                {
+                    double newBalance = card.TotalBalance - total;
+
+                    MessageDialog mApproved = new MessageDialog($"Your payment status is '{CreditCardStatus.Approved}'. The total price of your order is {total}. Your " +
+                                                        $"new balance is {newBalance}");
+                    mApproved.ShowAsync();
+                }
+                else
+                {
+                    MessageDialog m2 = new MessageDialog($"Your order status is {CreditCardStatus.Declined}, your total price is less than the payment price");
+                    m2.ShowAsync();
+                }
+                
 
 
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageDialog message = new MessageDialog("Error. Please try again");
+                message.ShowAsync();
             }
-              
+
         }
+
+
+        
 
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -103,14 +124,7 @@ namespace Group2_CS_FinalProject.Pages
                 
         }
 
-        public bool IsAbleToPay()
-        {
-            //if the card balance is less then the total amount throw an exeption use the pay method from creditcard class.
-            //var card = card[0], cart = shopping[0]; => if card.balance < cart.total return false else true; 
-            //also add the emum status if approved or not when pressing the pay button.
-            
-            return true;
-        }
+      
 
         private void MonthOfBirthComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) //calculate the day of month for every month
         {
@@ -207,5 +221,10 @@ namespace Group2_CS_FinalProject.Pages
             return isValid;
         }
 
+
+        private void MoveToReceipt_OnClick(object sender, RoutedEventArgs e)
+        {
+            //this.Frame.Navigate(typeof())
+        }
     }
 }
