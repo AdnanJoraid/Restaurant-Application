@@ -42,6 +42,18 @@ namespace Group2_CS_FinalProject.Pages
 
         private void CreditCardButton_OnClick(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var myCart = _mainShoppingCart[0]; 
+                ShoppingCart c = new ShoppingCart();
+                c.GetPrice(myCart); 
+
+
+            }
+            catch (Exception exception)
+            {
+                MessageDialog message = new MessageDialog("Error. Please try again");
+            }
               
         }
 

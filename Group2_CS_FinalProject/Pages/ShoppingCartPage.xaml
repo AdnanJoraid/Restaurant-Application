@@ -140,17 +140,21 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <ListView x:Name="ShoppingCartListView">
-               <!--<TextBlock Text="Items In Shopping Cart"
-                          FontSize="15"
-                          Foreground="Black"
-                          HorizontalAlignment="Center"
-                          x:Name="ItemInShoppingCart"/>-->
+            <ListView x:Name="ShoppingCartListView" Grid.Column="1" Grid.Row="1">
+               
 
-               <ListView.ItemTemplate>
+                <ListView.ItemTemplate>
                    <DataTemplate x:DataType="local2:Product">
-                       <StackPanel>
+                       <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Margin="50">
+                           <TextBlock Text="Items In Shopping Cart"
+                                      FontSize="25"
+                                      Foreground="Black"
+                                      HorizontalAlignment="Center"
+                                      x:Name="ItemInShoppingCart"
+                                      HorizontalTextAlignment="Center"
+                                      Margin="5"
+                                      FontFamily="Bold"/>
 
                            <TextBlock Text="{x:Bind ItemName }"
                                       FontSize="24"
@@ -164,27 +168,10 @@
                                       FontSize="24"
                                       Foreground="Black"
                                       Margin="5"/>
-
-
-
-
-                        </StackPanel>
-                       
-
-                     
-                       
-
-
+                       </StackPanel>
                    </DataTemplate>
-
-
                </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
-
         
-
-
-
     </Grid>
 </Page>
