@@ -1,0 +1,155 @@
+﻿<Page
+    x:Class="Group2_CS_FinalProject.Pages.Receipt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Group2_CS_FinalProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="LightGray">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Receipt"
+                   FontSize="75"
+                   Foreground="Black"
+                   HorizontalAlignment="Center"
+        />
+
+        <TextBlock Text="Shopping Cart"
+                   FontSize="47"
+                   Foreground="Black"
+                   Padding="60,20"
+        />
+        <StackPanel x:Name="HeaderPreset" Orientation="Horizontal">
+            <TextBlock Text="Item"
+                       FontWeight="Bold"
+                       FontSize="43"
+                       Foreground="Black"
+                       HorizontalTextAlignment="left"
+                       Padding="200,20"
+                   
+            />
+            <TextBlock Text="QTY"
+                       FontWeight="Bold"
+                       FontSize="43"
+                       Foreground="Black"
+                       Padding="100,20"
+            />
+            <TextBlock Text="Price"
+                       FontWeight="Bold"
+                       FontSize="43"
+                       Foreground="Black"
+                       Padding="150,20"
+            />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Placeholder"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="150,30"
+            />
+            <TextBlock Text="PLC"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="90,30"
+            />
+            <TextBlock Text="Price"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="175,30"
+            />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Placeholder"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="150,30"
+            />
+            <TextBlock Text="PLC"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="90,30"
+            />
+            <TextBlock Text="Price"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="175,30"
+            />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Placeholder"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="150,30"
+            />
+            <TextBlock Text="PLC"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="90,30"
+            />
+            <TextBlock Text="Price"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="175,30"
+            />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Placeholder"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="150,30"
+            />
+            <TextBlock Text="PLC"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="90,30"
+            />
+            <TextBlock Text="Price"
+                       FontSize="40"
+                       Foreground="Black"
+                       Padding="175,30"
+            />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Total"
+                       FontWeight="Bold"
+                       FontSize="43"
+                       Foreground="Black"
+                       Padding="180,10"          
+        />
+            <TextBlock x:Name="TotalPrice" Text="place"
+                       FontSize="43"
+                       Foreground="Black"
+                       Padding="50,10"
+            />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="BackToShopping"
+                    Click="BackToShopping_Click"
+                    Content="Back"
+                    Foreground="Black"
+                    FontSize="45"
+                    Height="70"
+                    Width="150"
+                    Margin="30"
+                    VerticalAlignment="Center"
+                    Background="LightGray"
+            />
+            <Button x:Name="Continue"
+                    Click="Continue_Click"
+                    Content="Finish"
+                    Foreground="Black"
+                    FontSize="45"
+                    Height="70"
+                    Width="150"
+                    Margin="30"
+                    VerticalAlignment="Center"
+                    Background="LightGray"
+            />
+        </StackPanel>
+ 
+    </StackPanel>
+
+    
+</Page>
