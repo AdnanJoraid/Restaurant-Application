@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,8 +21,10 @@ namespace Group2_CS_FinalProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
     public sealed partial class Receipt : Page
     {
+        private List<Product> _prod = new List<Product>();
         public Receipt()
         {
             this.InitializeComponent();
@@ -38,6 +41,16 @@ namespace Group2_CS_FinalProject.Pages
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoForward();
+        }
+        public double CalculateReceipt(List<Product> prod)
+        {
+            double TotalPrice = 0;
+            foreach (var item in prod)
+            {
+                TotalPrice += (item.ItemPrice * item.ItemQty);
+            }
+
+            return TotalPrice;
         }
     }
 }
