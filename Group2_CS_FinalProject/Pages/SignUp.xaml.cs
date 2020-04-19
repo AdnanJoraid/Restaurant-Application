@@ -57,9 +57,12 @@ namespace Group2_CS_FinalProject.Pages
             }
             else
             {
-                
-                UsernameList.Add(NewUsername.Text);
-                PasswordList.Add(NewPassword.Text);
+
+                Customer customer = new Customer();
+                customer.Name = (NewUsername.Text);
+                customer.Password = (NewPassword.Text);
+                UsernameList.Add(customer.Name);
+                PasswordList.Add(customer.Password);
                 Frame.Navigate(typeof(MainPage));
             }
         }

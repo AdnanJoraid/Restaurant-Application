@@ -21,39 +21,29 @@ namespace Group2_CS_FinalProject.Pages
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     ///
-    
+
 
     public sealed partial class Customer : Page
     {
-
-        //create a list here 
+        List<Customer> customers = new List<Customer>();
         public Customer()
         {
             this.InitializeComponent();
         }
 
-        private void DisplayName()
+        private void DisplayInfo()
         {
             string name;
-
-            foreach (var info in UsernameList) //use the list name here
-            {
-                name = info.pass;
-            }
-
-            UsernameInfo.Text = name; //assign value to it
-        }
-
-        private void DisplayPass()
-        {
             string pass;
 
-            foreach (var info in PasswordList)
+            foreach (var info in customers)
             {
-                pass = info.pass;
+                name = info.Name;
+                pass = info.Password;
             }
 
-            PasswordInfo.Text = pass;
+            UsernameInfo.Text = 0;
+            PasswordInfo.Text = 0;
         }
     }
 }
