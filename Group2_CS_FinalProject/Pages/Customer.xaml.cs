@@ -44,8 +44,8 @@ namespace Group2_CS_FinalProject.Pages
                 pass = info.Password;
             }
 
-            UsernameInfo.Text = 0;
-            PasswordInfo.Text = 0;
+            UsernameInfo.Text = "";
+            PasswordInfo.Text = "";
         }
     }
 }
