@@ -27,6 +27,8 @@ namespace Group2_CS_FinalProject.Pages
             this.InitializeComponent();
         }
 
+        
+
         private void BackToShopping_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
