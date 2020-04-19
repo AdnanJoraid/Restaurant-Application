@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,13 +19,33 @@ using Windows.UI.Xaml.Navigation;
 namespace Group2_CS_FinalProject.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Creator: Haashim Chouhdry
+    /// uses data from the sign in class to display on the customer xaml page
     /// </summary>
+    ///
+
+
     public sealed partial class Customer : Page
     {
+        List<CustCreate> customers = new List<CustCreate>();
         public Customer()
         {
             this.InitializeComponent();
+        }
+
+        private void DisplayInfo()
+        {
+            string name;
+            string pass;
+
+            foreach (var info in customers)
+            {
+                name = info.Name;
+                pass = info.Password;
+            }
+
+            UsernameInfo.Text = "";
+            PasswordInfo.Text = "";
         }
     }
 }

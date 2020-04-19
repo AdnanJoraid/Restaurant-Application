@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,7 +20,8 @@ using Windows.UI.Xaml.Navigation;
 namespace Group2_CS_FinalProject.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Creater: Haashim Chouhdry
+    /// Class for the sign up xaml that runs through a list to see if a username or password has been used already and has loops to see if anything has been inputed inot the text boxes or not
     /// </summary>
     public sealed partial class SignUp : Page
     {
@@ -45,7 +47,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (NewUsername.Text == "" && NewPassword.Text == "")
+            if (NewUsername.Text == "" || NewPassword.Text == "")
             {
                 MessageDialog Empty = new MessageDialog($"Enter Username and Password");
                 Empty.ShowAsync();
@@ -57,8 +59,12 @@ namespace Group2_CS_FinalProject.Pages
             }
             else
             {
-                UsernameList.Add(NewUsername.Text);
-                PasswordList.Add(NewPassword.Text);
+
+                CustCreate customer = new CustCreate();
+                customer.Name = (NewUsername.Text);
+                customer.Password = (NewPassword.Text);
+                UsernameList.Add(customer.Name);
+                PasswordList.Add(customer.Password);
                 Frame.Navigate(typeof(MainPage));
             }
         }

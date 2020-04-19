@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Group2_CS_FinalProject.Classes
 {
+    //Adam Czubernat - Drink Class
+    //Stores a readonly list that holds the Drink Name and Price avaiable.
     public class Drink
 
     {

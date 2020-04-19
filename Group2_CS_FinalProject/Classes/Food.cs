@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Group2_CS_FinalProject.Classes
 {
+    //Adam Czubernat - Food Class
+    //Stores a readonly list that holds the Drink Name and Price avaiable.
     public class Food
     {
         public static readonly string[] ItemN = {"Hamburger","HotDogs","Chicken Soup","Steak and Potatoes","Poutine","Spagehetti and Meatballs","Chicken Parm","Pasta Alfredo","Ice Cream","Cheescake"}; 

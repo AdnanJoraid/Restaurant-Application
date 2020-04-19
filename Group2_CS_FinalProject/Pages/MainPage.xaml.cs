@@ -23,6 +23,15 @@ namespace Group2_CS_FinalProject.Pages
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //Adam Czubernat - MainPage.xaml.cs
+        //ButtonBase_OnClick:
+        //when user press the top taskbar button, if the panel is closed, it will change it to open
+        // and add names for each button, and if user press this button and the panel is open, it will close the panel
+        //and get rid of the names of each button.
+        //ButtonBase_OnClick1:
+        //navigates to the main Page when button click
+        //ButtonBase_OnClick2:
+        //navigates to the AddProducts page when button click
         public MainPage()
         {
             this.InitializeComponent();
@@ -80,7 +89,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void ButtonBase_OnClick6(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(typeof(ReceiptPage));
+            frame.Navigate(typeof(Receipt));
         }
     }
 }

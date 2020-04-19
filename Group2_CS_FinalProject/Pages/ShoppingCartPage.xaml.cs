@@ -1,19 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Group2_CS_FinalProject.Classes;
 
@@ -32,7 +22,7 @@ namespace Group2_CS_FinalProject.Pages
         private readonly List<CreditCard> _cardsHistory = new List<CreditCard>();
 
         private readonly List<Product> _mainShoppingCart = new List<Product>();
-        public ShoppingCartPage()
+        public ShoppingCartPage() //adnan joraid created this page and implemented the methods for this page, creditcard, IPayment. 
         {
             this.InitializeComponent();
             PopulateComboBoxes(); //calls the method populateComboBoxes as soon as the page loads
@@ -225,7 +215,11 @@ namespace Group2_CS_FinalProject.Pages
 
         private void MoveToReceipt_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReceiptPage), _mainShoppingCart); //passes data and navigate to Receipt page
+           this.Frame.Navigate(typeof(Receipt), _mainShoppingCart); //passes data and navigate to Receipt page
         }
+
+     
     }
+
+    
 }

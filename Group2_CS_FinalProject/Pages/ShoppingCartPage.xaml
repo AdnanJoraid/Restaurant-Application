@@ -65,7 +65,6 @@
                 HorizontalAlignment="Center"
                 x:Name="IsCreditCardAdded"
                 />
-
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2">

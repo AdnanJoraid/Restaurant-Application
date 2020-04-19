@@ -120,7 +120,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\CreditCard.cs" />
-    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\CustCreate.cs" />
     <Compile Include="Classes\Drink.cs" />
     <Compile Include="Classes\Food.cs" />
     <Compile Include="Classes\IPayment.cs" />

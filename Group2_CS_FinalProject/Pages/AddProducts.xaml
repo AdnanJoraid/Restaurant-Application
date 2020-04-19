@@ -1,4 +1,9 @@
-﻿<Page
+﻿<!--Adam Czubernat - AddProducts.xaml
+    This xaml displays all the items avaiable to be added.Display picture of item, Price of item, allows
+    user to enter quantity of item then adds to list to be saved. Then there is a button at the bottom that
+    navigates user to the shoppingCartPage passing the saved list as well.-->
+s
+<Page
     x:Class="Group2_CS_FinalProject.Pages.AddProducts"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
