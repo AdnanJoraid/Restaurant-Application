@@ -7,6 +7,11 @@ using Group2_CS_FinalProject.Pages;
 
 namespace Group2_CS_FinalProject.Classes
 {
+    //Adam Czubernat - Product Class
+    //this class holds the properties for the items, method AddFood and AddDrink creates new instance of product class
+    //and is called when user wants to add a item to their order. the method gets the item name and price from either class food or drink
+    //depending on which method is called, both classes have 2 parameters x for the item postion and qty for the item qty, then it returns
+    //the product instance of the item that was added.
     public class Product 
     {
         public string ItemName { get; set; }

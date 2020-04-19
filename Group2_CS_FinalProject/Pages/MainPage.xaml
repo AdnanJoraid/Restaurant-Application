@@ -1,4 +1,8 @@
-﻿<Page
+﻿<!--Adam Czubernat - MainPage.xaml
+    this xaml is the mainpage of the entire application, create taskbar on the sides,
+    implement buttons to navigate throughout the application, and create a frame for all the pages
+    to display in.-->
+<Page
     x:Class="Group2_CS_FinalProject.Pages.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

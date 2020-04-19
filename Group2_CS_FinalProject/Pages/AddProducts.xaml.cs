@@ -19,9 +19,13 @@ using Windows.UI.Popups;
 
 namespace Group2_CS_FinalProject.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    //Adam Czubernat - AddProducts.xaml.cs
+    //This xaml.cs has all the button click events for when user adds item and when user adds his items to the shopping cart.
+    //for each button it adds an instance of product to a list ListItems, qty and x are sent to either AddFood or AddDrink to determine item name,
+    //price and qty, then stores it in the ListItems list. then each button that adds item to list, there is try and catch that assures that the user enters
+    //a interger for the quantity of each item. then ButtonBase_OnClick15 checks if the list is empty, and if it is it throws message to add item, else it navigates
+    //user to shoppinCartPage also passing list ItemsList for that class to use.
+
     public sealed partial class AddProducts : Page
     {
         private Product _prod = new Product();
