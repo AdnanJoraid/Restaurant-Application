@@ -19,7 +19,7 @@ namespace Group2_CS_FinalProject.Classes
         }
 
 
-        internal double GetPrice(List<Product> products) //gets the price of a passed prod list
+        public double GetPrice(List<Product> products) //gets the price of a passed prod list
         {
             double price = 0; 
             foreach (Product item in products)

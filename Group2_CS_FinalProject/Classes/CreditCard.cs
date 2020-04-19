@@ -21,7 +21,7 @@ namespace Group2_CS_FinalProject.Classes
         public string Name { get; set; } 
 
         public CreditCardStatus CardStatus { get; set; }
-        private readonly Random random; //generate a random balance for the user.
+        private readonly Random Random; //generate a random balance for the user.
 
         public int TotalBalance { get; set; }
 
@@ -32,19 +32,19 @@ namespace Group2_CS_FinalProject.Classes
         public string Date { get; set; }
 
 
-        public bool Pay(double total, double balance) //going to change the parameter to take an argument of type shopping cart (the one that is being currently used by the xaml).
+        public bool Pay(double total, double balance) //uses the Interface IPayment bool to check if the user is able to calculate
         {
             return balance > total;
         }
 
         public CreditCard()
         {
-            random = new Random();
+            Random = new Random();
         }
 
         public void GenerateBalance() //generate a random balance for the user
         {
-            TotalBalance = random.Next(100, 270);
+            TotalBalance = Random.Next(100, 270);
         }
 
         
