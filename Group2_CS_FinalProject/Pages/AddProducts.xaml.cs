@@ -229,7 +229,6 @@ namespace Group2_CS_FinalProject.Pages
                 error.ShowAsync();
             }
         }
-
         private void ButtonBase_OnClick13(object sender, RoutedEventArgs e)
         {
             try
@@ -245,7 +244,6 @@ namespace Group2_CS_FinalProject.Pages
                 error.ShowAsync();
             }
         }
-
         private void ButtonBase_OnClick14(object sender, RoutedEventArgs e)
         {
             try
