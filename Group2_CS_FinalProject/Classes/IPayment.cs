@@ -11,6 +11,5 @@ namespace Group2_CS_FinalProject.Classes
 
         bool Pay(double amount); //check if the user has enough balance
 
-
     }
 }
