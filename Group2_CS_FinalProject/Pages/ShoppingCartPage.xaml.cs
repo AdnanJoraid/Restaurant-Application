@@ -225,7 +225,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void MoveToReceipt_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Receipt), _mainShoppingCart); //passes data and navigate to Receipt page
+            this.Frame.Navigate(typeof(ReceiptPage), _mainShoppingCart); //passes data and navigate to Receipt page
         }
     }
 }

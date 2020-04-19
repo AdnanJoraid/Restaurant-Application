@@ -80,7 +80,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void ButtonBase_OnClick6(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(typeof(Receipt));
+            frame.Navigate(typeof(ReceiptPage));
         }
     }
 }
