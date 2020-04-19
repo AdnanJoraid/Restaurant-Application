@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Group2_CS_FinalProject.Pages
@@ -57,7 +58,7 @@ namespace Group2_CS_FinalProject.Pages
             }
             else
             {
-
+                
                 Customer customer = new Customer();
                 customer.Name = (NewUsername.Text);
                 customer.Password = (NewPassword.Text);
