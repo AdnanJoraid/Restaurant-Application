@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Schema;
-using Windows.UI.Xaml.Input;
 
 namespace Group2_CS_FinalProject.Classes
 {
-    class Customer
+    class CustCreate
     {
         public string Name { get; set; }
         public string Password { get; set; }
 
-        public bool DoesExsist(string name, List<Customer> ListCust)
+        public bool DoesExsist(string name, List<CustCreate> ListCust)
         {
             for (int i = 0; i < ListCust.Count; i++)
             {

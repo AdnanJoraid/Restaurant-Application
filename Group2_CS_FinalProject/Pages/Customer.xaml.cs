@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace Group2_CS_FinalProject.Pages
 
     public sealed partial class Customer : Page
     {
-        List<Customer> customers = new List<Customer>();
+        List<CustCreate> customers = new List<CustCreate>();
         public Customer()
         {
             this.InitializeComponent();

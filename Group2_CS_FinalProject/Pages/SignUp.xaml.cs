@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,7 +59,7 @@ namespace Group2_CS_FinalProject.Pages
             else
             {
 
-                Customer customer = new Customer();
+                CustCreate customer = new CustCreate();
                 customer.Name = (NewUsername.Text);
                 customer.Password = (NewPassword.Text);
                 UsernameList.Add(customer.Name);

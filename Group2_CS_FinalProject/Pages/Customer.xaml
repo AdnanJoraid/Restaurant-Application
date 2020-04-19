@@ -30,10 +30,12 @@
                 </StackPanel>
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="Username"
+                               x:Name="UsernameInfo"
                                HorizontalAlignment="Center"
                                FontSize="60"
                                Foreground="Black"/>
                     <TextBlock Text="Password"
+                               x:Name="PasswordInfo"
                                HorizontalAlignment="Center"
                                FontSize="60"
                                Margin="70"
