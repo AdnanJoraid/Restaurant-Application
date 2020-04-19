@@ -8,7 +8,7 @@ namespace Group2_CS_FinalProject.Classes
 {
     class Receipt
     {
-
+        private List<Product> _prod = new List<Product>();
         public string ReceiptNumber { get; set; }
         public DateTime date { get; set; }
 

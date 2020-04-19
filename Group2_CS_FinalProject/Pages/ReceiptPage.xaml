@@ -37,7 +37,31 @@
                        Padding="150,20"
             />
         </StackPanel>
-
+        <StackPanel>
+            <ListView x:Name="ReceiptListViews">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local2:Product">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{x:Bind ItemName}"
+                                       FontSize="30"
+                                       Foreground="Black"
+                                       Padding="150,20"
+                            />
+                            <TextBlock Text="{x:Bind ItemQty}"
+                                       FontSize="30"
+                                       Foreground="Black"
+                                       Padding="150,20"
+                            />
+                            <TextBlock Text="{x:Bind ItemPrice}"
+                                       FontSize="30"
+                                       Foreground="Black"
+                                       Padding="150,20"
+                            />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
        
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="Total"
