@@ -29,7 +29,15 @@ namespace Group2_CS_FinalProject.Pages
 
         private void EnterLogin_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+            }
+            catch
+            {
+
+            }
+            this.Frame.Navigate(typeof(ShoppingCartPage));
         }
     }
 }

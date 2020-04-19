@@ -9,20 +9,15 @@
     Background="LightGray">
     <StackPanel Orientation="Vertical">
         <TextBlock Text="Receipt"
-                   FontSize="75"
+                   FontSize="50"
                    Foreground="Black"
                    HorizontalAlignment="Center"
-        />
-
-        <TextBlock Text="Shopping Cart"
-                   FontSize="47"
-                   Foreground="Black"
-                   Padding="60,20"
+                   Margin="30"
         />
         <StackPanel x:Name="HeaderPreset" Orientation="Horizontal">
             <TextBlock Text="Item"
                        FontWeight="Bold"
-                       FontSize="43"
+                       FontSize="37"
                        Foreground="Black"
                        HorizontalTextAlignment="left"
                        Padding="200,20"
@@ -30,98 +25,98 @@
             />
             <TextBlock Text="QTY"
                        FontWeight="Bold"
-                       FontSize="43"
+                       FontSize="37"
                        Foreground="Black"
                        Padding="100,20"
             />
             <TextBlock Text="Price"
                        FontWeight="Bold"
-                       FontSize="43"
+                       FontSize="37"
                        Foreground="Black"
                        Padding="150,20"
             />
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Placeholder"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
                        Padding="150,30"
             />
             <TextBlock Text="PLC"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="90,30"
+                       Padding="145,30"
             />
             <TextBlock Text="Price"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="175,30"
+                       Padding="120,30"
             />
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Placeholder"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
                        Padding="150,30"
             />
             <TextBlock Text="PLC"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="90,30"
+                       Padding="145,30"
             />
             <TextBlock Text="Price"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="175,30"
+                       Padding="120,30"
             />
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Placeholder"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
                        Padding="150,30"
             />
             <TextBlock Text="PLC"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="90,30"
+                       Padding="145,30"
             />
             <TextBlock Text="Price"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="175,30"
+                       Padding="120,30"
             />
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Placeholder"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
                        Padding="150,30"
             />
             <TextBlock Text="PLC"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="90,30"
+                       Padding="145,30"
             />
             <TextBlock Text="Price"
-                       FontSize="40"
+                       FontSize="30"
                        Foreground="Black"
-                       Padding="175,30"
+                       Padding="120,30"
             />
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="Total"
                        FontWeight="Bold"
-                       FontSize="43"
+                       FontSize="37"
                        Foreground="Black"
-                       Padding="180,10"          
+                       Padding="150,10"          
         />
             <TextBlock x:Name="TotalPrice" Text="place"
-                       FontSize="43"
+                       FontSize="37"
                        Foreground="Black"
-                       Padding="50,10"
+                       Padding="130,10"
             />
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -129,7 +124,7 @@
                     Click="BackToShopping_Click"
                     Content="Back"
                     Foreground="Black"
-                    FontSize="45"
+                    FontSize="37"
                     Height="70"
                     Width="150"
                     Margin="30"
@@ -140,7 +135,7 @@
                     Click="Continue_Click"
                     Content="Finish"
                     Foreground="Black"
-                    FontSize="45"
+                    FontSize="37"
                     Height="70"
                     Width="150"
                     Margin="30"

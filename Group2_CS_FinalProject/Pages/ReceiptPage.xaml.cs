@@ -29,12 +29,12 @@ namespace Group2_CS_FinalProject.Pages
 
         private void BackToShopping_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.GoBack();
         }
 
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.GoForward();
         }
     }
 }
