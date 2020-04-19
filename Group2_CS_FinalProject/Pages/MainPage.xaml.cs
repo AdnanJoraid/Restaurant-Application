@@ -84,7 +84,7 @@ namespace Group2_CS_FinalProject.Pages
         }
         private void ButtonBase_OnClick5(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            frame.Navigate(typeof(Settings));
         }
 
         private void ButtonBase_OnClick6(object sender, RoutedEventArgs e)

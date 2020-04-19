@@ -31,7 +31,19 @@ namespace Group2_CS_FinalProject.Pages
 
         }
 
-        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var products = e.Parameter as List<Product>;
+
+            foreach (var prod in products)
+            {
+                    _prod.Add(prod);
+                    ReceiptListViews.Items.Add(prod);
+            }
+
+            CalculateReceipt(_prod);
+        }
+
 
         private void BackToShopping_Click(object sender, RoutedEventArgs e)
         {
@@ -44,13 +56,16 @@ namespace Group2_CS_FinalProject.Pages
         }
         public double CalculateReceipt(List<Product> prod)
         {
-            double TotalPrice = 0;
+            double Total = 0;
             foreach (var item in prod)
             {
-                TotalPrice += (item.ItemPrice * item.ItemQty);
+                Total += (item.ItemPrice * item.ItemQty);
             }
+            TotalPrice.Text = $"Your total is {Total}";
+            return Total;
 
-            return TotalPrice;
+           
+
         }
     }
 }
