@@ -132,9 +132,6 @@
     <Compile Include="Pages\AddProducts.xaml.cs">
       <DependentUpon>AddProducts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreditCardAddingPage.xaml.cs">
-      <DependentUpon>CreditCardAddingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Customer.xaml.cs">
       <DependentUpon>Customer.xaml</DependentUpon>
     </Compile>
@@ -146,6 +143,9 @@
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt.xaml.cs">
+      <DependentUpon>Receipt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ShoppingCartPage.xaml.cs">
       <DependentUpon>ShoppingCartPage.xaml</DependentUpon>
@@ -195,10 +195,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CreditCardAddingPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Customer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Receipt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

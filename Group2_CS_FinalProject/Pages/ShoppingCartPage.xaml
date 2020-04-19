@@ -68,6 +68,16 @@
 
         </StackPanel>
 
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Button Style="{StaticResource ButtonStyle}"
+                    FontSize="24"
+                    Content="Move to receipt "
+                    HorizontalAlignment="Center"
+                    x:Name="MoveToReceipt"
+                    Click="MoveToReceipt_OnClick"/>
+
+        </StackPanel>
+
         <StackPanel Grid.Column="0" Grid.Row="0">
             
             <TextBlock x:Name="Title"

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="LightGray">
 
     <StackPanel Orientation="Vertical">
         <StackPanel>
@@ -14,33 +14,41 @@
                    Height="200"
                    Width="850"
                    HorizontalAlignment="Center"
+                   
                    />
         </StackPanel>
         <TextBlock Text="Login"
-                   FontSize="100"
+                   FontSize="70"
                    HorizontalAlignment="Center"
                    Margin="60"
+                   Foreground="Black"
                    />
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel>
                 <TextBlock Text="Username"
-                           FontSize="75"
+                           FontSize="45"
                            HorizontalAlignment="Center"
+                           Foreground="Black"
                     />
                 <TextBlock Text="Password"
-                           FontSize="75"
+                           FontSize="45"
                            Margin="40"
+                           Foreground="Black"
                     />
             </StackPanel>
             <StackPanel>
                 <TextBox x:Name="Username"
-                         Height="100"
+                         Height="60"
                          Width="600"
+                         Foreground="Black"
+                         FontSize="45"
                     />
                 <TextBox x:Name="Password"
-                         Height="100"
+                         Height="60"
                          Width="600"
                          Margin="40"
+                         Foreground="Black"
+                         FontSize="45"
                     />
             </StackPanel>
             
@@ -49,10 +57,11 @@
         <Button x:Name="EnterLogin"
                 Click="EnterLogin_Click"
                 Content="Enter"
-                FontSize="60"
-                Height="100"
-                Width="200"
+                FontSize="55"
+                Height="90"
+                Width="190"
                 HorizontalAlignment="Center"
+                Foreground="Black"
                 />
 
     </StackPanel>
