@@ -19,7 +19,8 @@ using Windows.UI.Xaml.Navigation;
 namespace Group2_CS_FinalProject.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Creator: Haashim Chouhdry
+    /// uses data from the sign in class to display on the customer xaml page
     /// </summary>
     ///
 

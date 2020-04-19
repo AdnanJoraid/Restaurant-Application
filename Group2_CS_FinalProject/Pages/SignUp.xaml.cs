@@ -20,7 +20,8 @@ using Windows.UI.Xaml.Navigation;
 namespace Group2_CS_FinalProject.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Creater: Haashim Chouhdry
+    /// Class for the sign up xaml that runs through a list to see if a username or password has been used already and has loops to see if anything has been inputed inot the text boxes or not
     /// </summary>
     public sealed partial class SignUp : Page
     {

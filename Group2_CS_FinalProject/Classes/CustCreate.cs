@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Group2_CS_FinalProject.Classes
 {
+    /// <summary>
+    /// Creator: Haashim Chouhdry
+    /// creates a customer 
+    /// </summary>
     class CustCreate
     {
         public string Name { get; set; }
