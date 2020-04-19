@@ -26,5 +26,29 @@ namespace Group2_CS_FinalProject.Pages
         {
             this.InitializeComponent();
         }
+
+        private void DisplayName()
+        {
+            string name;
+
+            foreach (var info in UsernameList)
+            {
+                name = info.pass;
+            }
+
+            UsernameInfo.Text = name;
+        }
+
+        private void DisplayPass()
+        {
+            string pass;
+
+            foreach (var info in PasswordList)
+            {
+                pass = info.pass;
+            }
+
+            PasswordInfo.Text = pass;
+        }
     }
 }

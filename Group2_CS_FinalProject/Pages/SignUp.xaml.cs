@@ -45,7 +45,7 @@ namespace Group2_CS_FinalProject.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (NewUsername.Text == "" && NewPassword.Text == "")
+            if (NewUsername.Text == "" || NewPassword.Text == "")
             {
                 MessageDialog Empty = new MessageDialog($"Enter Username and Password");
                 Empty.ShowAsync();
