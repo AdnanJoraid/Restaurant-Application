@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,14 +23,44 @@ namespace Group2_CS_FinalProject.Pages
     /// </summary>
     public sealed partial class SignUp : Page
     {
+        List<string> UsernameList = new List<string>();
+        List<string> PasswordList = new List<string>();
+
         public SignUp()
         {
             this.InitializeComponent();
         }
 
+        public int CheckList()
+        {
+            for (int i = 0; i < UsernameList.Count; i++)
+            {
+                if (NewUsername.Text == UsernameList[i] || NewPassword.Text == PasswordList[1])
+                {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            if (NewUsername.Text == "" && NewPassword.Text == "")
+            {
+                MessageDialog Empty = new MessageDialog($"Enter Username and Password");
+                Empty.ShowAsync();
+            }
+            else if (CheckList() == 1)
+            {
+                MessageDialog Empty = new MessageDialog($"Username or Password Already Taken Please Enter Another One");
+                Empty.ShowAsync();
+            }
+            else
+            {
+                UsernameList.Add(NewUsername.Text);
+                PasswordList.Add(NewPassword.Text);
+                Frame.Navigate(typeof(MainPage));
+            }
         }
     }
 }

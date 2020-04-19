@@ -37,13 +37,14 @@
                              x:Name="NewUsername"
                              Width="500"
                              Height="60"
-                             Foreground="Black"
-                             FontSize="60"/>
+                             FontSize="30"
+                             Foreground="Black"/>
                     <TextBox Margin="40"
+                             x:Name="NewPassword"
                              HorizontalAlignment="Center"
                              Width="500"
                              Height="60"
-                             FontSize="60"
+                             FontSize="30"
                              Foreground="Black" />
 
                 </StackPanel>
