@@ -57,6 +57,7 @@ namespace Group2_CS_FinalProject.Pages
             }
             else
             {
+                
                 UsernameList.Add(NewUsername.Text);
                 PasswordList.Add(NewPassword.Text);
                 Frame.Navigate(typeof(MainPage));

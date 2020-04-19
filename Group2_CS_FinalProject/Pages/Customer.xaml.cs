@@ -20,8 +20,13 @@ namespace Group2_CS_FinalProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    ///
+    
+
     public sealed partial class Customer : Page
     {
+
+        //create a list here 
         public Customer()
         {
             this.InitializeComponent();
@@ -31,12 +36,12 @@ namespace Group2_CS_FinalProject.Pages
         {
             string name;
 
-            foreach (var info in UsernameList)
+            foreach (var info in UsernameList) //use the list name here
             {
                 name = info.pass;
             }
 
-            UsernameInfo.Text = name;
+            UsernameInfo.Text = name; //assign value to it
         }
 
         private void DisplayPass()
