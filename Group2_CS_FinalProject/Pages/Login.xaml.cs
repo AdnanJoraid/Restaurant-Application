@@ -39,5 +39,10 @@ namespace Group2_CS_FinalProject.Pages
             }
             this.Frame.Navigate(typeof(ShoppingCartPage));
         }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SignUp));
+        }
     }
 }

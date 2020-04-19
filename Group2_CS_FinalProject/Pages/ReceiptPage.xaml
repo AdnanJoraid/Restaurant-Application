@@ -5,6 +5,7 @@
     xmlns:local="using:Group2_CS_FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local2="using:Group2_CS_FinalProject.Classes"
     mc:Ignorable="d"
     Background="LightGray">
     <StackPanel Orientation="Vertical">
@@ -36,76 +37,8 @@
                        Padding="150,20"
             />
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Placeholder"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="150,30"
-            />
-            <TextBlock Text="PLC"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="145,30"
-            />
-            <TextBlock Text="Price"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="120,30"
-            />
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Placeholder"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="150,30"
-            />
-            <TextBlock Text="PLC"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="145,30"
-            />
-            <TextBlock Text="Price"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="120,30"
-            />
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Placeholder"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="150,30"
-            />
-            <TextBlock Text="PLC"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="145,30"
-            />
-            <TextBlock Text="Price"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="120,30"
-            />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Placeholder"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="150,30"
-            />
-            <TextBlock Text="PLC"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="145,30"
-            />
-            <TextBlock Text="Price"
-                       FontSize="30"
-                       Foreground="Black"
-                       Padding="120,30"
-            />
-        </StackPanel>
+       
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="Total"
                        FontWeight="Bold"

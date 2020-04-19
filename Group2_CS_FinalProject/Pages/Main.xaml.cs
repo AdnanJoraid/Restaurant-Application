@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group2_CS_FinalProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,10 +23,22 @@ namespace Group2_CS_FinalProject.Pages
     /// </summary>
     public sealed partial class Main : Page
     {
+        //private List<Product> _prod = new List<Product>();
         public Main()
         {
             this.InitializeComponent();
+
         }
 
+        //public double CalculateReceipt(List<Product> prod)
+        //{
+        //    double TotalPrice = 0;
+        //    foreach (var item in prod)
+        //    {
+        //        TotalPrice += (item.ItemPrice * item.ItemQty);
+        //    }
+
+        //    return TotalPrice;
+        //}
     }
 }

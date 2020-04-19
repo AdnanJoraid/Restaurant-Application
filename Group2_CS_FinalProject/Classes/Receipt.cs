@@ -8,20 +8,21 @@ namespace Group2_CS_FinalProject.Classes
 {
     class Receipt
     {
+
         public string ReceiptNumber { get; set; }
         public DateTime date { get; set; }
 
+
+
         public double CalculateReceipt(List<Product> prod)
         {
-            double total = 0;
+            double TotalPrice = 0;
             foreach (var item in prod)
             {
-                total += (item.ItemPrice * item.ItemQty);
+                TotalPrice += (item.ItemPrice * item.ItemQty);
             }
 
-            return total;
+            return TotalPrice;
         }
-
-
     }
 }

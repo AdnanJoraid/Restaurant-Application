@@ -53,8 +53,9 @@
             </StackPanel>
             
 
-        </StackPanel>
-        <Button x:Name="EnterLogin"
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="EnterLogin"
                 Click="EnterLogin_Click"
                 Content="Enter"
                 FontSize="55"
@@ -62,7 +63,18 @@
                 Width="190"
                 HorizontalAlignment="Center"
                 Foreground="Black"
-                />
-
+                Margin="20"
+            />
+            <Button x:Name="SignUp"
+                Click="SignUp_Click"
+                Content="Signup"
+                FontSize="55"
+                Height="90"
+                Width="190"
+                HorizontalAlignment="Center"
+                Foreground="Black"
+                Margin="20"
+            />
+        </StackPanel>
     </StackPanel>
 </Page>
