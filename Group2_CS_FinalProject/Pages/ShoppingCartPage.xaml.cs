@@ -22,7 +22,7 @@ namespace Group2_CS_FinalProject.Pages
         private readonly List<CreditCard> _cardsHistory = new List<CreditCard>();
 
         private readonly List<Product> _mainShoppingCart = new List<Product>();
-        public ShoppingCartPage()
+        public ShoppingCartPage() //adnan joraid created this page and implemented the methods for this page, creditcard, IPayment. 
         {
             this.InitializeComponent();
             PopulateComboBoxes(); //calls the method populateComboBoxes as soon as the page loads
