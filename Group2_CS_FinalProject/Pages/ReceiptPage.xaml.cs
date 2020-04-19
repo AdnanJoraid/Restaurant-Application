@@ -25,6 +25,7 @@ namespace Group2_CS_FinalProject.Pages
         public Receipt()
         {
             this.InitializeComponent();
+
         }
 
         

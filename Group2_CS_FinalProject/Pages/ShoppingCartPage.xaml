@@ -153,9 +153,9 @@
                
 
                 <ListView.ItemTemplate>
-                   <DataTemplate x:DataType="local2:Product">
-                       <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
-                                   Margin="50">
+                <DataTemplate x:DataType="local2:Product">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Margin="50">
                            <TextBlock Text="Items In Shopping Cart"
                                       FontSize="25"
                                       Foreground="Black"
