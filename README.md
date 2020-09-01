@@ -5,6 +5,7 @@ Written in C# in the UWP platform. This app was co-developed in my Interactive A
 ## Classes/Pages I worked on: 
   - CreditCard Class 
   - IPayment Interface 
-  - ShoppingCart.cs, shoppingCartPage.xaml/shoppingCartPage.xaml.cs
+  - ShoppingCart.cs
+  - shoppingCartPage.xaml/shoppingCartPage.xaml.cs
   
 
